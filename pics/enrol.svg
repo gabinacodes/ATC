@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="211" height="66" viewBox="0 0 211 66">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1207ab;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-size: 23px;
+        font-family: SegoeUI, Segoe UI;
+      }
+
+      .cls-3 {
+        filter: url(#Rectangle_91);
+      }
+    </style>
+    <filter id="Rectangle_91" x="0" y="0" width="211" height="66" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_1904" data-name="Group 1904" transform="translate(-861.5 -3956.5)">
+    <g id="Group_611" data-name="Group 611" transform="translate(869.364 3958.681)">
+      <g id="Group_612" data-name="Group 612" transform="translate(0 0)">
+        <g id="Group_1873" data-name="Group 1873" transform="translate(0 0)">
+          <g class="cls-3" transform="matrix(1, 0, 0, 1, -7.86, -2.18)">
+            <rect id="Rectangle_91-2" data-name="Rectangle 91" class="cls-1" width="196" height="51" rx="25.5" transform="translate(7.5 2.5)"/>
+          </g>
+          <text id="Enroll" class="cls-2" transform="translate(68.636 33.32)"><tspan x="0" y="0">Enroll</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

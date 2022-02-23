@@ -1,0 +1,461 @@
+
+    :root {
+        --atccolor: #1207AB;
+        font-size: 16px;
+    }
+
+    * {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        border: 0;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+    }
+
+    html {
+        color: #000;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-position: center;
+        width: 100vw;
+        padding-top: 10vh;
+
+    }
+
+
+
+    .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .help-block {
+        color: red;
+    }
+
+    a,
+    a:hover,
+    button {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    img {
+        vertical-align: middle;
+        border: 0;
+        -ms-interpolation-mode: bicubic;
+    }
+
+    sup {
+        color: red;
+    }
+
+button,
+    .atcbutton a {
+        background-color: var(--atccolor);
+        border-color: var(--atccolor);
+        text-align: center;
+        color: #fff;
+        font-size: 1.5vw;
+        border-radius: 50px;
+        padding: 1vh 1.7vw;
+    }
+
+    a.button {
+        display: inline-block;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+#logo {
+    width: 10%;
+    min-width: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    width: 90%;
+    display: block;
+
+}
+
+
+a.getstarted {
+    background-color: #fff;
+    color: #1207AB;
+    border-radius: 40px;
+    padding: 1vh 0.5vw;
+    font-size: 14px
+}
+
+.icon {
+    display: none;
+    color: #A4A4A4;
+    font-size: 28px;
+    margin-right: 4vw;
+    margin-left: 4vw;
+    z-index: 40;
+    cursor: pointer;
+
+}
+
+    /*+++++++++++++++SIGN UP/LOGIN+++++++++*/
+    #loginpage,
+    #signuppage {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        overflow: visible;
+    }
+
+    #signuppage {
+        background-image: url("signuppage.svg");
+        background-color: #031D48;
+    }
+
+    .signup {
+        width: 340px;
+        position: absolute;
+        right: 10vw;
+        top: 3vh;
+        margin: 0px 0;
+        padding: 0px;
+        overflow: auto;
+    }
+
+    .login {
+        width: 340px;
+        position: absolute;
+        right: 10vw;
+        top: 5vh;
+        margin: 0px 0;
+        padding: 0px;
+        overflow: auto;
+    }
+
+
+    #signuppagelogoandswitch a,
+    #signuppageaboutatc a {
+        color: #fff;
+    }
+
+    #signuppagelogoandswitch {
+        position: absolute;
+        top: -5vh;
+        left: 7vw;
+    }
+
+    #signuppagelogoandswitch img {
+        width: 60%;
+    }
+
+    #signuppageaboutatc {
+        position: absolute;
+        bottom: 20vh;
+        left: 7vw;
+        display:none
+    }
+
+    #signupheader {
+        background-color: #204BBB;
+        padding: 5%;
+    }
+
+    #signupbody {
+        padding: 15px 20px 10px;
+        color: #000;
+        background-color: rgba(255, 255, 255, 0.7);
+        font-size: 20px;
+    }
+
+    .signupbody form {
+        margin: 7vh 0;
+    }
+
+    #signupbody form {
+        margin: 20px 0;
+    }
+
+    .signupbodycontactnames {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .signupbodycontactnames > span {
+        display: inline-block;
+        width: 45%;
+    }
+
+    .signupbodycontactnames > span div {
+        display: inline-block;
+    }
+
+    .signupbodycontactnames input {
+        width: 100%;
+    }
+
+    #signupbody > div:first-child {
+        font-weight: bold;
+    }
+
+    #signupbody small {
+        color: orangered;
+    }
+
+    #signuppage input,
+    #loginpage input {
+        margin: 10px 0 10px 0;
+        padding: 0px;
+        outline: none;
+        border: none;
+        background: transparent;
+        border-bottom: 1.5px solid #000;
+    }
+
+    #signuppage .select {
+        width: 100%;
+    }
+
+    #signupbody > a:first-child {
+        color: var(--atccolor);
+        font-weight: bold;
+    }
+
+    #continuewith {
+        text-align: center;
+    }
+
+    #continuewith a {
+        text-align: center;
+        display: block;
+        width: 70%;
+        font-size: 12px;
+        border-radius: 50px;
+        border-color: #000;
+        padding: 10px 15px;
+        text-align: center;
+        margin: 10px auto;
+        outline: none;
+        font-weight: bold;
+    }
+
+    #continuewithgoogle {
+        background-color: transparent;
+        border: 1px solid #000;
+        color: #000;
+    }
+
+    #continuewithfacebook {
+        background-color: var(--atccolor);
+        color: #fff;
+    }
+
+    #signupstatement {
+        padding: 10px 0px 0px;
+        font-size: 12px;
+    }
+
+    #signuppage button,
+    #loginpage button {
+        background-color: #204BBB;
+        display: inline-block;
+        font-size: 12px;
+        border-color: #204BBB;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+.inputDetails{
+    margin: 5vh 0;
+}
+
+
+
+/*++++++++++++++++++++++++breakpoint790++++++++++++++++++++++++*/
+@media only screen and (max-width:790px) {
+
+    #logo {
+        min-width: 100px;
+    }
+
+    .icon {
+        display: inline-block;
+    }
+
+    .login {
+        position: static;
+        margin: 0 auto;
+    }
+
+    #signuppagelogoandswitch,
+    #signuppageaboutatc,
+    .signup {
+        position: static;
+        margin: 2vh auto;
+    }
+
+    #signuppagelogoandswitch,
+    #signuppageaboutatc {
+        text-align: center;
+    }
+
+    .signup {
+        font-size: 12px;
+    }
+
+    #signuppagelogoandswitch img {
+        width: 25%;
+    }
+
+}
+
+/*++++++++++++++++++++++++breakpoint480++++++++++++++++++++++++*/
+@media only screen and (max-width:480px) {
+
+    button,
+    .atcbutton a {
+        font-size: 3.2vw;
+        padding: 4px 7px;
+    }
+}
+    .firstwidth {
+        width: 10%;
+    }
+
+    .secondwidth {
+        width: 20%;
+    }
+
+    .thirdwidth {
+        width: 30%;
+    }
+
+    .fourthwidth {
+        width: 40%;
+    }
+
+    .halfwidth {
+        width: 50%;
+    }
+
+    .sixthwidth {
+        width: 60%;
+    }
+
+    .seventhwidth {
+        width: 70%;
+    }
+
+    .eighthwidth {
+        width: 80%;
+    }
+
+    .ninethwidth {
+        width: 90%;
+    }
+
+    .fullwidth {
+        width: 100%;
+    }
+
+    .font12 {
+        font-size: 12px;
+    }
+
+    .font14 {
+        font-size: 14px;
+    }
+
+    .font16 {
+        font-size: 16px;
+    }
+
+    .font18 {
+        font-size: 18px;
+    }
+
+    .font20 {
+        font-size: 20px;
+    }
+
+    .font22 {
+        font-size: 22px;
+    }
+
+    .font25 {
+        font-size: 25px;
+    }
+
+    .font30 {
+        font-size: 30px;
+    }
+
+    .font32 {
+        font-size: 32px;
+    }
+
+    .font35 {
+        font-size: 35px;
+
+    }
+
+    .font1vw {
+        font-size: 1vw;
+
+    }
+
+    .font2vw {
+        font-size: 1vw;
+
+    }
+
+    .font5vw {
+        font-size: 5vw;
+
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .zeromarginpadding {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+    }
+
+    .flex {
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        padding: 5px 0;
+        flex-wrap: wrap;
+
+    }
+
+    .inline {
+        display: inline;
+    }
+
+    .block {
+        display: block;
+    }
+
+    .inlineblock {
+        display: inline-block;
+    }
+
+

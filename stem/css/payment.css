@@ -1,0 +1,298 @@
+
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  --atccolor :#1207AB;
+}
+
+input:focus:required:invalid {
+  border: 0.5px solid red;
+  outline: none;
+}
+
+input[type="submit"]:hover {
+  background: #0165b6;
+}
+
+li {
+  list-style-type: none;
+}
+.modal .container-fluid {
+  background-color: #fff;
+  -webkit-box-shadow: #fff;
+  box-shadow: #fff;
+  margin: auto;
+}
+
+.modal .container {
+  padding: 30px;
+  height: initial;
+}
+
+.modal .container header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 0 20px 0;
+}
+
+.modal .container header img {
+  width: 30%;
+}
+
+.modal .container header span #paid {
+  margin: 0 0 0 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal .container header span #paid img {
+  width: 150%;
+  display: block;
+}
+
+.modal .container header span i {
+  padding: 20px 0 0 5px;
+  font-size: 10px;
+  font-style: normal;
+  display: block;
+  font-weight: 600;
+}
+
+.modal .container .right_align {
+  float: right;
+  font-size: 10px;
+  clear: both;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.modal .container .right_align #atc {
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+
+.modal .container section {
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+.modal .container section div {
+  padding: 15px 5px;
+}
+
+.modal .container section div .invoice {
+  background: #EDEDED;
+  height: 100px;
+}
+
+.modal .container section div .invoice p {
+  margin-top: 10px;
+}
+
+.modal .container .ceoName {
+  padding: 15px 10px;
+  width: 55.9%;
+  line-height: 1.4;
+}
+
+.modal .container .ceoName p {
+  margin-top: 10px;
+}
+
+.modal .container table {
+  margin: 30px 0 20px 0;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+}
+
+.modal .container table td,
+.modal .container table th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  line-height: 3;
+}
+
+.modal .container table th {
+  background-color: #EDEDED;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.modal .container table #tfoot {
+  background-color: #D5D5D5;
+}
+
+.modal .container table .total {
+  text-align: center;
+}
+
+.modal .container table #grand {
+  text-align: right;
+}
+
+.modal .container table .empty {
+  height: 50px;
+}
+
+.modal .container table #no-border {
+  border: none;
+}
+
+/*Payment Portal*/
+.modal {
+  display: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 50vw;
+  height: 100vh;
+  background-color: rgba(000,000,000,70%);
+  color: #000;
+}
+
+.modal .Payment-Portal {
+  min-height: 50vh;
+  border-radius: 15px;
+  width: 415px;
+}
+
+.modal .Payment-Portal p {
+  text-align: center;
+  color: #000000;
+  font-size: 16px;
+}
+
+.modal .Payment-Portal h1 {
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+  color: var(--atccolor);
+  margin: 20px 0 0 0;
+}
+
+.modal .Payment-Portal .form-group {
+  width: 100%;
+}
+
+.modal .Payment-Portal label {
+  font-size: 12px;
+  display: block;
+  margin: 20px 0 5px 6px;
+}
+
+.modal .Payment-Portal input {
+  display: inline;
+  background: #EDEDED;
+  border-radius: 7px;
+  padding: 0 0 0 10px;
+  line-height: 3.5;
+}
+
+.modal .Payment-Portal i {
+  font-size: 12px;
+  color: #56DF74;
+  font-style: normal;
+  padding-top: 10px;
+}
+
+.modal .Payment-Portal svg {
+  font-size: 30px;
+  height: 30px;
+  padding-top: 5px;
+  display: inline;
+  float: right;
+  cursor: pointer;
+}
+
+.modal .Payment-Portal .select {
+  font-size: 12px;
+  margin: 0 0 20px 0;
+}
+
+.modal .Payment-Portal .select ul {
+  margin: 20px 0 20px 0;
+}
+
+.modal .Payment-Portal .select .form-check-input {
+  width: 5%;
+  margin: 0 0 10px 0;
+}
+
+.modal .Payment-Portal .btn {
+  width: 100%;
+  color: white;
+  background: var(--atccolor);
+  border-radius: 7px;
+}
+
+.modal .Payment-Portal .btn:hover {
+  background: #07741f;
+}
+
+.modal #verified {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.modal #notRegistered {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 720px) {
+  body {
+    background-color: #E5E5E5;
+  }
+
+  .modal .container-fluid {
+    height: 726;
+    width: 600px;
+  }
+
+  .modal .container {
+    font-size: 20px;
+  }
+
+  .modal .container header span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .modal .container header span i {
+    font-style: normal;
+    margin: 25px 0;
+    white-space: nowrap;
+    padding: 20px 0 0 5px;
+  }
+
+  .modal .container #tfoot {
+    background-color: #D5D5D5;
+    font-weight: 700;
+    font-size: 15px;
+    color: #373737;
+  }
+
+
+}

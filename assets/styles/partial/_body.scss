@@ -1,0 +1,287 @@
+section {
+  padding: $contentPadding;
+  &#overlay {
+    position: fixed;
+    background-color: $black;
+    opacity: 0.5;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+  }
+
+  &#academy {
+    div {
+      padding-top: $headerHeight;
+      width: 100%;
+      @include media {
+        padding-top: 1.5 * $headerHeight;
+        max-width: 45%;
+      }
+    }
+    img {
+      width: 100%;
+      transform: scale(1.15);
+      animation-duration: 4s;
+      clip-path: polygon(0% 0%, 100% 1%, 100% 100%, 0% 100%);
+      @include media {
+        transform: scale(1.1);
+        &:last-child {
+          display: none;
+        }
+        min-width: 53.8%;
+        width: 53.8%;
+        transform: translate(3.125%, 0) scale(1.1);
+      }
+    }
+    @include media {
+      flex-direction: row;
+      background: {
+        image: url(/assets/img/circleBackground.svg);
+        repeat: no-repeat;
+        position: 200% -100%;
+        size: 75% 75%;
+      }
+    }
+  }
+  &#acad {
+    > div {
+      &.tablet,
+      &.flex_r {
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+        &.affiliates {
+          flex-wrap: wrap;
+          &:first-child {
+            //margin-top: 5vh;
+            img {
+              margin-top: 18 * $smallMargin;
+              @include media{
+                margin-top: 8 * $smallMargin;
+              }
+            }
+          }
+          img {
+            filter: opacity(0.3);
+            object-fit: scale-down;
+            object-position: left;
+            width: 25.3%;
+            margin-top: 8 * $smallMargin;
+            @include media {
+              margin-top: 0 * $smallMargin;
+              width: 16%;
+              object-position: center;
+            }
+          }
+        }
+        &.academy {
+          img {
+            width: 24%;
+            //height: 320px;
+            margin: 3 * $paddingHeight 1.5 * $smallMargin;
+            object-fit: contain;
+            border-radius: 2 * $borderRadius;
+            image-rendering: pixelated;
+            &:hover {
+              transform: scale(1.1);
+              /* filter: sepia(100%) hue-rotate(90deg)
+                drop-shadow(8px 8px 10px gray); */
+              filter: grayscale(100%);
+              // object-fit: cover;
+              box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+            }
+            @include media(1440px) {
+              //height: 55vh;
+            }
+          }
+        }
+      }
+      &.note {
+        @include media {
+          width: 70%;
+          text-align: center;
+        }
+        @include media($laptop) {
+          width: 65%;
+        }
+      }
+    }
+  }
+  &#qhse {
+    background-color: $deepBlue;
+    padding-top: 4 * $paddingHeight;
+    * {
+      color: #fff;
+    }
+    a {
+      border: none;
+      background-color: #0135d6;
+      box-shadow: 2px 2px #000;
+      box-shadow: 0 0 3px rgba(60, 72, 88, 15);
+      @include media {
+        align-self: flex-start;
+      }
+    }
+    img {
+      transform: translate(-3.125%, 0) scale(1.135);
+      @include media {
+        transform: translate(3.5%, -2.5%);
+        min-width: 50%;
+        width: 50%;
+        margin-right: 0;
+      }
+      @include media(1200px) {
+        min-width: 45%;
+        width: 45%;
+      }
+    }
+    @include media {
+      margin-top: 8 * $paddingHeight;
+      align-items: center;
+      justify-content: space-between;
+      div {
+        max-width: 50%;
+      }
+    }
+  }
+  &#steam {
+    padding: 0;
+    background: linear-gradient(
+      0deg,
+      #a5a6f6 -11.14%,
+      rgba(252, 221, 236, 0) 10.68%
+    );
+    @include media {
+      background: {
+        image: url("/assets/img/airship.svg"),
+          linear-gradient(0deg, #a5a6f6 -11.14%, rgba(252, 221, 236, 0) 28.68%);
+        repeat: no-repeat;
+        size: 90%, 100%;
+        position: 60% 10%;
+      }
+    }
+    > div {
+      padding: $contentPadding;
+      &.note {
+        h4{
+          margin: 0 0 4.5vh;
+        }
+        @include media {
+          max-width: 55%;
+          padding-top: 10vh;
+        }
+      }
+      &.kids {
+        img {
+          height: 50vh;
+          max-height: 250px;
+          width: 90%;
+          margin-bottom: 4vh;
+          object-fit: cover;
+          border-radius: 2 * $borderRadius;
+          image-rendering: pixelated;
+          &:hover {
+            transform: scale(1.2);
+          }
+          @include media {
+            height: 35vh;
+            max-height: 25%;
+            width: 30%;
+            margin-top: 10vh;
+          }
+        }
+      }
+      &:last-child a {
+        margin-top: 0;
+        @include media {
+          background-color: #d7d8fb;
+        }
+      }
+    }
+  }
+  &#workstation {
+    padding: 0;
+    > div {
+      padding: $contentPadding;
+      align-items: flex-start;
+      &:first-child {
+        justify-content: space-between;
+        @include media($laptop) {
+          margin-top: 10%;
+        }
+        > div {
+          @include media($laptop) {
+            width: 45%;
+          }
+        }
+        .buttons {
+          justify-content: flex-start;
+
+          a {
+            margin: $paddingHeight 0;
+            @include media {
+              margin: 1.5 * $paddingHeight 0 5.5 * $paddingHeight;
+              &:first-child {
+                border: none;
+                margin-right: 3vw;
+              }
+              &:last-child {
+                width: 25%;
+              }
+            }
+          }
+        }
+        img {
+          image-rendering: pixelated;
+          @include media($tablet) {
+            margin: -10% 0 5% 10%;
+            padding-bottom: 10%;
+            z-index: 1;
+            min-width: 30%;
+            width: 35%;
+            transform: translateY(-20%);
+          }
+          @include media($laptop){
+            padding-bottom: 20%;
+            margin: -15% 0 5% 10%;
+
+          }
+          @include media(1200px) {
+            transform: translateY(-30%);
+          }
+        }
+      }
+      &#contact {
+        border-top: {
+          left-radius: 10px;
+          right-radius: 10px;
+        }
+        margin-bottom: 0vh;
+        padding: 4 * $paddingHeight $paddingSide;
+        @include media {
+          padding: 5% $paddingSide;
+          margin: -30% $paddingSide 0;
+          transform: translateY(60%);
+          border-radius: 10px;
+          z-index: 10;
+        }
+        p {
+          @include media {
+            max-width: 85%;
+          }
+        }
+        h4 {
+          color: #a6efff;
+        }
+        a {
+          border: 1px solid #fff;
+          @include media {
+            width: 50%;
+            margin: 0 0 0 4vw;
+            padding: 0 5px;
+          }
+        }
+      }
+    }
+  }
+}

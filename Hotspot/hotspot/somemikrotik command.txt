@@ -1,0 +1,5 @@
+tool user-manager user print where username=222
+
+ip hotspot user print value-list
+
+tool user-man export file=usermanbackup

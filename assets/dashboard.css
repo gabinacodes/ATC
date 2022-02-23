@@ -1,0 +1,647 @@
+:root {
+    --dashbpadding: 4vh 10px;
+    --photoSize: 8vw;
+    --minPhotoSize: 150px;
+}
+
+body {
+    color: #000;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+a,
+a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+i,
+label {
+    cursor: pointer;
+}
+
+hr {
+    background-color: #E2E2E2;
+    height: 9px;
+    margin: 1vh 0 3vh;
+    width: 60vw;
+    border: none;
+}
+
+.no-js .owl-carousel,
+.owl-carousel.owl-loaded {
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 5px;
+    overflow: visible
+}
+
+.owl-carousel div.owl-item {
+    /*.alumnus*/
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.owl-carousel.owl-loaded img {
+    width: 50%;
+    margin: auto;
+}
+
+.owl-dots {
+    display: none
+}
+
+.sidebar {
+    color: #fff;
+    background-color: rgb(18, 7, 171, 0.7);
+    /*#1207AB*/
+    height: 100vh;
+    width: 15vw;
+    min-width: 250px;
+    padding: 4vh 2.5vw;
+    position: fixed;
+    top: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1000;
+    display: none;
+}
+
+.sidebar img {
+    width: 60%;
+    top: 10;
+}
+
+.sidebar a {
+    display: block;
+    margin: 1vh 0;
+    color: #fff;
+}
+
+.sidebar a:hover {
+    color: #fff;
+}
+
+.myview {
+    margin-top: 10vh
+}
+
+.myview a:nth-child(7), .myview a:last-child{
+    display: none;
+}
+
+.trainings {
+    position: absolute;
+    bottom: 10vh;
+}
+
+.fas.fa-th-large {
+    font-size: 30px;
+    margin: 0 2vw;
+    position: absolute;
+    color: #1207AB;
+}
+
+.dashboardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 0 8vh;
+    height: 40px;
+    position: relative;
+    overflow: visible;
+}
+
+.dashboardHeader img {
+    color: #1207AB;
+    width: 10%;
+    min-width: 150px;
+}
+
+.searchAtc {
+    width: 50%;
+    height: 12vh;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    caret-color: #1207AB;
+}
+.searchAtc form {
+    position: relative;
+    height: 40%;
+    top: 33%;
+}
+
+.searchAtc input {
+    position: absolute;
+    margin: 0;
+    outline: 0;
+    border: 2px solid #cdccde;
+    border-radius: 40px;
+    padding: 0 0 0 4%;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    z-index: 50;
+    overflow: hidden;
+}
+
+.atcsearchresult {
+    position: absolute;
+    top: 55%;
+    color: #000;
+    padding: 20px 0;
+    text-align: left;
+    display: none;
+    width: 100%;
+    background: none;
+}
+
+.atcsearchresult > div {
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 1);
+    padding: 1vh 1vw;
+    font-size: 1rem;
+}
+
+.atcsearchresult a {
+    color: #000;
+}
+
+.atcsearchresult > div:hover {
+    opacity: 0.5;
+}
+
+.searchbutton {
+    position: absolute;
+    right: 0;
+    margin: 0;
+    outline: 0;
+    border: 0;
+    border-radius: 30px;
+    padding: 0;
+    height: 100%;
+    line-height: 100%;
+    width: 30%;
+    min-width: 40px;
+    color: #fff;
+    background-color: #cdccde;
+    z-index: 50;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #1207AB;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    overflow: visible;
+    cursor: pointer;
+}
+
+.avatar .mydetails {
+    overflow: visible;
+    position: absolute;
+    top: 42px;
+    right: 0;
+    text-align: right;
+    z-index: 1000;
+    display: none;
+    border-radius: 10px;
+    background-color: rgb(18, 7, 171, 0.5);
+    border-color: rgb(18, 7, 171, 0.7);
+}
+
+.avatar a {
+    display: block;
+    width: 180px;
+    padding-right: 15px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.maincontent {
+    margin: 5vh 5vw 0 7vw;
+    overflow: visible;
+}
+
+.profile {
+    min-height: 40vh;
+    background-color: #EFF3FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10vh 0 0;
+    padding-bottom: 5px;
+    border-radius: 15px;
+    overflow: visible;
+    position: relative;
+}
+
+#photo {
+    width: var(--photoSize);
+    height: var(--photoSize);
+    min-width: var(--minPhotoSize);
+    min-height: var(--minPhotoSize);
+    background-color: rgb(18, 7, 171, 0.7);
+    border-color: rgb(18, 7, 171, 0.7);
+    border-radius: 50%;
+    box-shadow: -8px -15px #E2E2E2;
+    position: absolute;
+    transform: translate(-7px, -5px);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#myphoto {
+    display: none;
+}
+
+#output {
+    object-fit: cover;
+    overflow: hidden;
+    height: var(--photoSize);
+    min-height: var(--minPhotoSize);
+    width: var(--photoSize);
+    min-width: var(--minPhotoSize);
+    display: none;
+
+}
+
+#upload {
+    text-align: center;
+    color: #fff;
+
+}
+
+.profileInfo {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5vw;
+}
+
+.profileInfo #fullname {
+    font-size: 40px;
+}
+
+.profileInfo > div {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+.profileInfo > div:first-child {
+    font-size: 25px;
+    font-weight: 700
+}
+
+.profileInfo > div span {
+    font-weight: bold;
+}
+
+.enrolledcourses {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.enrolledcourses > div {
+    padding: 7px;
+    margin: 1vh 1vw;
+    font-size: 1rem;
+    background-color: #EEEAEA;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.enrolledcourses img {
+    width: 35%;
+}
+
+.enrolledcourses > div div {
+    margin: 0.5vh auto;
+}
+
+.progressContainer {
+    display: flex;
+    align-items: center;
+}
+
+progress {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 16px;
+    width: 70%;
+    border-radius: 23px;
+    overflow-x: hidden;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #fff;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .5) inset;
+}
+
+progress::-webkit-progress-value {
+    border-radius: 23px
+}
+
+.progressmetric.low progress::-webkit-progress-value {
+    background: rgb(18, 7, 171, 0.4);
+}
+
+.progressmetric.middle progress::-webkit-progress-value {
+    background: rgb(18, 7, 171, 0.9);
+}
+
+.progressmetric.high progress::-webkit-progress-value {
+    background: green;
+    opacity: 0.2;
+}
+
+.progressmetric.complete progress::-webkit-progress-value {
+    background: green;
+}
+
+.progressmetric.low progress::-moz-progress-bar {
+    background: rgb(18, 7, 171, 0.4);
+}
+
+.progressmetric.middle progress::-moz-progress-bar {
+    background: rgb(18, 7, 171, 0.9);
+}
+
+.progressmetric.high progress::-moz-progress-bar {
+    background: green;
+    opacity: 0.2;
+}
+
+.progressmetric.complete progress::-moz-progress-bar {
+    background: green;
+}
+
+.myDashboardCourseDetail {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.mycourses {}
+
+.currentCourses {
+    margin: 3vh 0 2vh;
+    width: 100%;
+
+}
+
+.currentCourses > div:first-child {
+    font-size: 25px;
+}
+
+.activities {
+    text-align: center;
+    align-self: flex-start;
+    font-size: 20px;
+    margin-top: 5vh;
+    margin-left: 5vh;
+}
+
+.activities div:last-child {
+    height: 100%;
+    min-height: 300px;
+    width: 20vw;
+    background-color: #EBEBEB;
+    border-radius: 20px;
+}
+
+footer {
+    width: 100%;
+    overflow-x: hidden;
+    padding: 7vh 0 7vh 7vw;
+    background-color: #E4E4E4;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 1rem;
+}
+
+.followicons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 5vw;
+}
+
+.follow {
+    margin: 2vh 0 0;
+}
+
+.follow img {
+    width: 12%;
+}
+
+@media only screen and (max-width:900px) {
+    .myDashboardCourseDetail {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: block;
+    }
+
+    .dashboardHeader{
+
+    }
+    .searchAtc{
+        width:70%;
+        margin-top: 8%;
+    }
+
+    .activities {
+        margin: 5vh 0;
+    }
+
+    .activities div:last-child {
+        width: 100%;
+    }
+    .profileInfo {
+        margin-left: 10vw;
+        margin-top: 18vh;
+    }
+
+    :root {
+        --dashbpadding: 4vh 10px;
+        --photoSize: 5vw;
+        --minPhotoSize: 140px;
+    }
+
+    #photo {
+        width: var(--photoSize);
+        height: var(--photoSize);
+        min-width: var(--minPhotoSize);
+        min-height: var(--minPhotoSize);
+    }
+
+    #output {
+        height: var(--photoSize);
+        min-height: var(--minPhotoSize);
+        width: var(--photoSize);
+        min-width: var(--minPhotoSize);
+    }
+
+    .profileInfo > div {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width:789px) {
+
+
+    .dashboardHeader {
+        margin: 0 0 17vh;
+    }
+    .myview a:nth-child(7), .myview a:last-child{
+        display: block
+    }
+
+    .fas.fa-th-large {
+        font-size: 30px;
+        position: static;
+        margin: 0;
+        margin-right: 7vw;
+        float: right;
+    }
+
+    .avatar{
+        visibility: hidden
+    }
+
+    .searchAtc{
+        margin-top: -12%;
+    }
+
+    footer {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+        font-size: 18px;
+        padding: 2vh 0 0;
+    }
+
+    .footerservice{
+        width: 100%;
+    }
+
+    .rights{
+        text-align: center;
+        background-color: #010B34;
+        color: #fff;
+        display: block;
+        padding: 2.5vh 0;
+    }
+    .rights span{
+        display: block
+    }
+
+    .followicons {
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 6vh;
+        width: 100%;
+        text-align: center;
+    }
+
+    .follow{
+        display: inline-block
+    }
+
+}
+
+@media only screen and (max-width:478px) {
+
+    .searchAtc{
+        margin-top: -20%;
+    }
+
+    .profileInfo {
+        margin: 5vh 5px 5vh 2vw;
+
+    }
+
+    dashboardHeader {
+        padding-left: 4vw;
+    }
+
+    :root {
+        --dashbpadding: 4vh 10px;
+        --photoSize: 7vw;
+        --minPhotoSize: 150px;
+    }
+
+    .myDashboardCourseDetail {
+        display: block;
+    }
+
+    .enrolledcourses {
+        display: block;
+    }
+    .profile{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center
+    }
+
+    #photo {
+        width: var(--photoSize);
+        height: var(--photoSize);
+        min-width: var(--minPhotoSize);
+        min-height: var(--minPhotoSize);
+        position: static;
+        margin: auto;
+        display: block
+    }
+
+    #upload {
+        margin-top: 50%;
+    }
+
+    #output {
+        height: var(--photoSize);
+        min-height: var(--minPhotoSize);
+        width: var(--photoSize);
+        min-width: var(--minPhotoSize);
+    }
+
+    .profileInfo > div {
+        font-size: 1.2rem;
+    }
+
+}

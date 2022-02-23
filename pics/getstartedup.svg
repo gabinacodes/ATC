@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="157" height="60" viewBox="0 0 157 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #1207ab;
+        font-size: 18px;
+        font-family: SegoeUI, Segoe UI;
+      }
+
+      .cls-3 {
+        filter: url(#Rectangle_6);
+      }
+    </style>
+    <filter id="Rectangle_6" x="0" y="0" width="157" height="60" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_1903" data-name="Group 1903" transform="translate(-6827.5 -1876.5)">
+    <g id="Group_1902" data-name="Group 1902">
+      <g id="Group_478" data-name="Group 478" transform="translate(5126 1814)">
+        <g class="cls-3" transform="matrix(1, 0, 0, 1, 1701.5, 62.5)">
+          <rect id="Rectangle_6-2" data-name="Rectangle 6" class="cls-1" width="142" height="45" rx="22.5" transform="translate(7.5 2.5)"/>
+        </g>
+        <text id="GET_STARTED" data-name="GET STARTED" class="cls-2" transform="translate(1724 94)"><tspan x="0" y="0">GET STARTED</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

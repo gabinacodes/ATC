@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url("Roboto-Thin.ttf") format('ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 100;
+    font-display: swap;
+    src: url("Roboto-ThinItalic.ttf") format('ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("Roboto-Light.ttf") format('ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url("Roboto-LightItalic.ttf") format('ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("Roboto-Regular.ttf") format('ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("Roboto-Italic.ttf") format('ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("Roboto-Medium.ttf") format('ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url("Roboto-MediumItalic.ttf") format('ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("Roboto-Bold.ttf") format('ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url("Roboto-BoldItalic.ttf") format('ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("Roboto-Black.ttf") format('ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 900;
+    font-display: swap;
+    src: url("Roboto-BlackItalic.ttf") format('ttf');
+}
+
+@font-face {
+    font-family: "microsoft";
+    src: url("micross.ttf");
+}
+
+
+@font-face {
+    font-family: 'Segoe UI Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Regular'), url('Segoe UI.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Segoe UI Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Italic'), url('Segoe UI Italic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Segoe UI Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Bold'), url('Segoe UI Bold.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Segoe UI Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Bold Italic'), url('Segoe UI Bold Italic.woff') format('woff');
+}
+
+/*
+@font-face {
+font-family: "Segoe UI";
+src: url("Segoe UI.woff"), url("Segoe UI Bold Italic.woff"), url("Segoe UI Bold.woff"), url("Segoe UI Italic.woff");
+}
+*/
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/*
+@font-face {
+font-family: Roboto;
+src: url('https://3xyh3sqxv063a8xzo5uk2zn1-wpengine.netdna-ssl.com/wp-content/themes/Andela/assets/fonts/LetterGothicStd-Slanted.woff2') format("woff2"), url('https://3xyh3sqxv063a8xzo5uk2zn1-wpengine.netdna-ssl.com/wp-content/themes/Andela/assets/fonts/LetterGothicStd-Slanted.woff') format("woff"), url('https://3xyh3sqxv063a8xzo5uk2zn1-wpengine.netdna-ssl.com/wp-content/themes/Andela/assets/fonts/LetterGothicStd-Slanted.otf') format("opentype");
+font-style: normal;
+font-weight: 400
+}
+
+
+@font-face {
+font-family: microsoft ;
+src: url('https://3xyh3sqxv063a8xzo5uk2zn1-wpengine.netdna-ssl.com/wp-content/themes/Andela/assets/fonts/LetterGothicStd-Slanted.woff2') format("woff2"), url('https://3xyh3sqxv063a8xzo5uk2zn1-wpengine.netdna-ssl.com/wp-content/themes/Andela/assets/fonts/LetterGothicStd-Slanted.woff') format("woff"), url('https://3xyh3sqxv063a8xzo5uk2zn1-wpengine.netdna-ssl.com/wp-content/themes/Andela/assets/fonts/LetterGothicStd-Slanted.otf') format("opentype");
+font-style: normal;
+font-weight: 400
+}
+
+
+*/

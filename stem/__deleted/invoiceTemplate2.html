@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --atccolor: #1207AB;
+      font-size: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      outline: 0;
+      border: 0;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
+    }
+
+    html {
+      color: #000;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: "Roboto", sans-serif;
+      background-position: center;
+    }
+
+    .container {
+
+      height: initial;
+    }
+
+    .signature {
+      width: 100%;
+      margin: 0;
+    }
+
+    .signature .logo {
+      width: 30%;
+    }
+
+    th.space {
+      width: 40%;
+    }
+
+    .container .signature img {
+      display: inline;
+    }
+
+    .container .paid i {
+      padding: 20px 0 0 5px;
+      font-size: 10px;
+      font-style: normal;
+      display: block;
+      font-weight: 600;
+    }
+
+    .container .bank {
+      font-weight: 700;
+      font-size: 10px;
+      font-size: 13px;
+      margin: 0 0 5px 0;
+    }
+
+    .container section {
+      margin-top: 20px;
+      font-size: 13px;
+    }
+
+    .container section div {
+      padding: 15px 5px;
+    }
+
+    .container section div .invoice {
+      background: #EDEDED;
+      height: 100px;
+    }
+
+    .container section div .invoice p {
+      margin-top: 10px;
+    }
+
+    .container .ceoName {
+      padding: 15px 10px;
+      width: 55.9%;
+      line-height: 1.4;
+    }
+
+    .container .ceoName p {
+      margin-top: 10px;
+    }
+
+    .container table {
+      margin: 30px 0 20px 0;
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 12px;
+    }
+
+    .container section table td,
+    .container section table th {
+      border: 1px solid #dddddd;
+      padding: 8px;
+      line-height: 3;
+    }
+
+    .container section table th {
+      background-color: #EDEDED;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .container table #tfoot {
+      background-color: #D5D5D5;
+    }
+
+    .container table .total {
+      display: block;
+      text-align: center;
+    }
+
+    .container table #grand {
+      text-align: right;
+    }
+
+    .container table .empty {
+      height: 50px;
+    }
+
+    .container table #no-border {
+      border: none;
+    }
+
+    footer {
+      padding: 20px 0;
+      height: 50px;
+      color: white;
+      text-align: center;
+      background-color: #3E4095;
+    }
+
+
+    @media screen and (min-width: 720px) {
+      body {
+        background-color: #E5E5E5;
+      }
+
+      .container-fluid {
+        background-color: white;
+        -webkit-box-shadow: #fff;
+        box-shadow: #fff;
+        margin: auto;
+        height: 726;
+        width: 600px;
+      }
+
+      .container {
+        font-size: 20px;
+      }
+
+      .container #tfoot {
+        background-color: #D5D5D5;
+        font-weight: 700;
+        font-size: 15px;
+        color: #373737;
+      }
+
+      footer {
+        font-size: 10px;
+        margin: auto;
+        padding: 20px 0;
+        height: 50px;
+        color: white;
+        text-align: center;
+        background-color: #3E4095;
+      }
+    }
+
+    /*# sourceMappingURL=payment.css.map */
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="container">
+      <table class="signature">
+        <thead>
+          <tr>
+            <th class="logo"> <img src="../img/atcLogo.svg" alt="ATCLogo" /></th>
+            <th class="space"></th>
+            <th class="paid"> <img src="../img/paidImg.svg" alt="paid img" />
+              <div>RC 4455332</div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <br>
+          <tr>
+            <td></td>
+            <td></td>
+            <td class="bank">
+              <div>Africa Trainovation Consulting</div>
+              <div>GTBank - 0605087061</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+
+      <section>
+        <div>
+          <div class="invoice">
+            <strong> Invoice #${InvoiceID} </strong>
+            <p> Invoice Date:  ${invoiceDate} </p>
+            <p> Payment time: ${invoiceTime} </p>
+          </div>
+        </div>
+        <div class="ceoName">
+          <span>
+            <strong>Invoiced To: ${payer}</strong>
+            <p> ${address}</p>
+          </span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th> <strong>Description</strong> </th>
+              <th> <strong>Total</strong> </th>
+            </tr>
+          </thead>
+          <tbody>
+          ${tableRows}
+            <tr id="tfoot">
+              <td id="grand">
+                <strong>
+                  Grand Total
+                </strong>
+              </td>
+              <td class="total">
+                <strong>
+                 ${GrandTotal}
+                </strong>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+      Issued by: Africa Trainovation Consulting Limited
+    </footer>
+  </div>
+
+</body>
+
+</html>

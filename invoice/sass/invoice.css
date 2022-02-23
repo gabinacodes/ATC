@@ -1,0 +1,1033 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap);
+:root {
+  --atccolor: #1207AB;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+html {
+  color: #1B121C;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-position: center;
+  background: #1207AB;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #0271FB;
+}
+
+::selection {
+  color: #fff;
+  background-color: #0271FB;
+}
+
+a,
+button {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover,
+button:hover {
+  text-decoration: none;
+  color: #0271FB;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+sup {
+  color: red;
+}
+
+li {
+  list-style-type: none;
+}
+
+h3 {
+  margin: 0 0 20px 0;
+  font-weight: 900;
+}
+
+h4 {
+  margin: 0 0 20px 0;
+  font-weight: 900;
+}
+
+.modalContainer {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #FF3131;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 50vw;
+  height: 100vh;
+}
+
+.modalContainer .modal {
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  height: 40vh;
+  max-width: 90vw;
+  padding: 1em 1em 0 1em;
+}
+
+.modalContainer .modal a {
+  float: right;
+}
+
+.modalContainer .modal .modalText {
+  margin: auto;
+  margin: 2em;
+  text-align: center;
+  min-height: 50vh;
+}
+
+.modalContainer .modal .modalText img {
+  min-width: 20%;
+  display: block;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+.modalContainer button {
+  background-color: #FF3131;
+  color: #FFFFFF;
+  min-width: 50%;
+  min-height: 50px;
+  max-height: 60px;
+  font-size: 20px;
+  padding: 1em 1em;
+  margin-top: 1em;
+}
+
+.modalContainer button:hover {
+  text-decoration: none;
+  background-color: #e03333;
+}
+
+.modalContainer .deletedModal {
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  min-height: 45vh;
+  min-width: 90vw;
+  max-width: 40vw;
+  padding: 1em 1em 0 1em;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modalContainer .deletedModal .deletemodalcontent {
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+  width: 100%;
+}
+
+.modalContainer .deletedModal .deletemodalcontent img {
+  min-width: 10%;
+  display: block;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+.containerFluid {
+  position: relative;
+}
+
+.containerFluid #blueImage {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  min-width: 50px;
+  max-width: 150px;
+}
+
+.containerFluid .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0 0 3em 0;
+}
+
+.containerFluid .container .headingText {
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.containerFluid .container .headingText h1 {
+  margin: auto auto 20px auto;
+  word-break: break-all;
+  font-size: 27px;
+  font-weight: normal;
+  line-height: 126.5%;
+  text-align: center;
+  width: 230px;
+}
+
+.containerFluid .container .headingText .lead {
+  margin: 0.5em auto 20px auto;
+  width: 290px;
+}
+
+.containerFluid .container form {
+  background: #FFFFFF;
+  border-radius: 24px;
+  min-width: 90%;
+  max-width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 2em 1em;
+}
+
+.containerFluid .container form section {
+  width: 100%;
+}
+
+.containerFluid .container form .form-group {
+  min-width: 100%;
+  margin: 0 0 1em 0;
+}
+
+.containerFluid .container form .form-group label {
+  display: block;
+  color: #000000;
+  font-weight: 600;
+  font-size: 12px;
+  margin: 0 0 0.5em 0;
+}
+
+.containerFluid .container form .form-group input {
+  border: 1px solid #A9A9A9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 10px 0 10px;
+  border-radius: 5px;
+  min-height: 50px;
+  max-height: 60px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.containerFluid .container form .form-group select {
+  border: 1px solid #A9A9A9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 0 0 3px;
+  border-radius: 5px;
+  min-height: 50px;
+  max-height: 60px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.containerFluid .container form .form-group select:invalid {
+  color: gray;
+}
+
+.containerFluid .container form .form-group select #selected {
+  font-weight: normal;
+  color: #B4B4B4;
+}
+
+.containerFluid .container form .form-group select:invalid {
+  background: red;
+}
+
+.containerFluid .container form #payDate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.containerFluid .container form #payDate .paymentDate {
+  width: 80%;
+  max-width: 68%;
+}
+
+.containerFluid .container form #payDate .paymentDate #paymentDateInput {
+  min-width: 100%;
+  max-width: 80%;
+}
+
+.containerFluid .container form #payDate .paymentTime {
+  width: 30%;
+  text-align: right;
+}
+
+.containerFluid .container form #payDate .paymentTime #paymentTimeInput {
+  min-width: 100%;
+}
+
+.containerFluid .container form .payDesc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+}
+
+.containerFluid .container form .payDesc label {
+  white-space: nowrap;
+  padding: 0 0.5em 0 0;
+}
+
+.containerFluid .container form .payDesc .paymentDescription {
+  width: 80%;
+  max-width: 68%;
+}
+
+.containerFluid .container form .payDesc .paymentDescription .itemDesc {
+  min-width: 100%;
+  max-width: 80%;
+}
+
+.containerFluid .container form .payDesc .addon {
+  text-align: right;
+  width: 30%;
+}
+
+.containerFluid .container form .payDesc .addon .addonInput {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.containerFluid .container form .payDesc .addon .inner {
+  color: #FF3131;
+  margin-top: 5px;
+  display: none;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.containerFluid .container form .addItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: #1207AB;
+  width: 100%;
+  margin-bottom: 1em;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.containerFluid .container form .addItem strong {
+  margin: 0 0 0 0.3em;
+}
+
+.containerFluid .container form #upPayment {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.containerFluid .container form #upPayment label {
+  white-space: nowrap;
+}
+
+.containerFluid .container form #upPayment .UpFrontPayment {
+  width: 48%;
+  max-width: 48%;
+}
+
+.containerFluid .container form #upPayment .UpFrontPayment #upFrontInput {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.containerFluid .container form #upPayment .balancePayment {
+  width: 48%;
+  text-align: right;
+}
+
+.containerFluid .container form #upPayment .balancePayment #balancedInput {
+  max-width: 100%;
+  width: 100%;
+}
+
+.containerFluid .container form #due {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 100%;
+}
+
+.containerFluid .container form #due span {
+  max-width: 100%;
+}
+
+.containerFluid .container form #due .duedate {
+  width: 80%;
+  max-width: 68%;
+}
+
+.containerFluid .container form #due .duedate #duedateInput {
+  min-width: 100%;
+  max-width: 80%;
+}
+
+.containerFluid .container form #due .paymentTime {
+  width: 30%;
+  text-align: right;
+}
+
+.containerFluid .container form #due .paymentTime #paymentInput {
+  width: 100%;
+}
+
+.containerFluid .container form button {
+  border-color: #1207AB;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  background: #1207AB;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 1em;
+  min-height: 50px;
+  max-height: 60px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.containerFluid .container form button img {
+  padding-left: 12px;
+}
+
+@media screen and (min-width: 800px) {
+  .modalContainer {
+    min-width: 50vw;
+    height: 100vh;
+  }
+  .modalContainer .modal {
+    min-height: 40vh;
+    max-height: 40vh;
+    min-width: 40vw;
+    max-width: 70vw;
+    padding: 1em 1em 0 1em;
+  }
+  .modalContainer .modal a {
+    float: right;
+  }
+  .modalContainer .modal .modalText {
+    margin: auto;
+    padding-top: 3em;
+    margin: 2em;
+    text-align: center;
+  }
+  .modalContainer .modal .modalText img {
+    min-width: 40px;
+    display: block;
+    margin: auto;
+    margin-bottom: 1em;
+  }
+  .modalContainer button:hover {
+    text-decoration: none;
+    background-color: #e03333;
+  }
+  .modalContainer .deletedModal {
+    background-color: #FFFFFF;
+    border-radius: 24px;
+    min-height: 45vh;
+    min-width: 70vw;
+    padding: 1em 1em 0 1em;
+  }
+  .modalContainer .deletedModal .deletemodalcontent {
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+  }
+  .modalContainer .deletedModal .deletemodalcontent img {
+    min-width: 10%;
+    display: block;
+    margin: auto;
+    margin-bottom: 1em;
+  }
+  .containerFluid {
+    position: relative;
+  }
+  .containerFluid #blueImage {
+    max-width: 350px;
+  }
+  .containerFluid .container .headingText h1 {
+    margin: auto auto 3px auto;
+    font-size: 34px;
+    font-weight: 900;
+    width: 100%;
+  }
+  .containerFluid .container .headingText .lead {
+    margin: 2em auto 30px auto;
+    width: 100%;
+  }
+  .containerFluid .container form {
+    min-width: 60%;
+    max-width: 60%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 2em 2.5em;
+  }
+  .containerFluid .container form section {
+    min-width: 46%;
+    max-width: 46%;
+  }
+  .containerFluid .container form .form-group {
+    max-width: 100%;
+    min-width: 100%;
+    margin: 0 0 1em 0;
+  }
+  .containerFluid .container form .form-group label {
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0 0 0.5em 0;
+  }
+  .containerFluid .container form .form-group input {
+    min-width: 50%;
+    max-width: 100%;
+  }
+  .containerFluid .container form .form-group select {
+    min-width: 50%;
+    max-width: 100%;
+  }
+  .containerFluid .container form #payDate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    max-width: 50%;
+  }
+  .containerFluid .container form #payDate .paymentDate {
+    width: 60%;
+    max-width: 65%;
+  }
+  .containerFluid .container form #payDate .paymentDate #paymentDateInput {
+    min-width: 60%;
+    max-width: 65%;
+  }
+  .containerFluid .container form #payDate .paymentTime {
+    width: 40%;
+    max-width: 40%;
+    text-align: right;
+  }
+  .containerFluid .container form #payDate .paymentTime #paymentTimeInput {
+    min-width: 40%;
+    text-align: center;
+    padding-left: 1.5em;
+  }
+  .containerFluid .container form .payDesc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+  }
+  .containerFluid .container form .payDesc label {
+    white-space: nowrap;
+    padding: 0 0.5em 0 0;
+  }
+  .containerFluid .container form .payDesc .paymentDescription {
+    width: 80%;
+    max-width: 68%;
+  }
+  .containerFluid .container form .payDesc .paymentDescription .itemDesc {
+    min-width: 100%;
+    max-width: 80%;
+  }
+  .containerFluid .container form .payDesc .addon {
+    text-align: right;
+    width: 30%;
+  }
+  .containerFluid .container form .payDesc .addon .addonInput {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .containerFluid .container form .addItem {
+    border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    color: #1207AB;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  .containerFluid .container form .addItem strong {
+    margin: 0 0 0 0.3em;
+  }
+  .containerFluid .container form #upPayment {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .containerFluid .container form #upPayment label {
+    white-space: nowrap;
+  }
+  .containerFluid .container form #upPayment .UpFrontPayment {
+    width: 48%;
+    max-width: 48%;
+  }
+  .containerFluid .container form #upPayment .UpFrontPayment #upFrontInput {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .containerFluid .container form #upPayment .balancePayment {
+    width: 48%;
+  }
+  .containerFluid .container form #upPayment .balancePayment #balancedInput {
+    max-width: 100%;
+    width: 100%;
+  }
+  .containerFluid .container form #due {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 100%;
+  }
+  .containerFluid .container form #due span {
+    max-width: 100%;
+  }
+  .containerFluid .container form #due .duedate {
+    width: 80%;
+    max-width: 68%;
+  }
+  .containerFluid .container form #due .duedate #duedateInput {
+    min-width: 100%;
+    max-width: 80%;
+  }
+  .containerFluid .container form #due .paymentTime {
+    width: 30%;
+    text-align: right;
+  }
+  .containerFluid .container form #due .paymentTime #paymentInput {
+    width: 100%;
+    text-align: center;
+    padding-left: 1.5em;
+  }
+  .containerFluid .container form .button {
+    border-color: #1207AB;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    background: #1207AB;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 1em;
+    min-height: 50px;
+    max-height: 60px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .containerFluid .container .form2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 2em 5em;
+    min-width: 40%;
+    max-width: 60%;
+  }
+  .containerFluid .container .form2 button {
+    width: 70%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .modalContainer .modal {
+    min-height: 60vh;
+    max-height: 60vh;
+    min-width: 40vw;
+    max-width: 70vw;
+    padding: 1em 1em 0 1em;
+  }
+  .modalContainer .modal a {
+    float: right;
+  }
+  .modalContainer .modal .modalText {
+    padding-top: 1.5em;
+    margin: auto;
+    margin-top: 2em;
+    text-align: center;
+    font-size: 25px;
+    min-width: 30px;
+  }
+  .modalContainer .modal .modalText img {
+    display: block;
+    margin: auto;
+    margin-bottom: 1em;
+  }
+  .modalContainer button {
+    background-color: #FF3131;
+    color: #FFFFFF;
+    min-width: 50%;
+    min-height: 50px;
+    max-height: 60px;
+    font-size: 20px;
+  }
+  .modalContainer button:hover {
+    text-decoration: none;
+    background-color: #e03333;
+  }
+  .modalContainer .deletedModal {
+    background-color: #FFFFFF;
+    border-radius: 24px;
+    min-height: 45vh;
+    min-width: 30vw;
+    padding: 1em 1em 0 1em;
+  }
+  .modalContainer .deletedModal .deletemodalcontent {
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+  }
+  .modalContainer .deletedModal .deletemodalcontent img {
+    min-width: 10%;
+    display: block;
+    margin: auto;
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1360px) {
+  .containerFluid {
+    position: relative;
+  }
+  .containerFluid #blueImage {
+    max-width: 550px;
+  }
+  .containerFluid .container .headingText {
+    font-size: 30px;
+  }
+  .containerFluid .container .headingText h1 {
+    font-size: 40px;
+    font-weight: 900;
+    width: 100%;
+  }
+  .containerFluid .container .headingText .lead {
+    font-size: 20px;
+    width: 100%;
+  }
+  .containerFluid .container form {
+    min-width: 90%;
+    max-width: 90%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 6.5em 2.5em 2em 2.5em;
+    min-height: 70vh;
+  }
+  .containerFluid .container form section {
+    min-width: 46%;
+    max-width: 46%;
+  }
+  .containerFluid .container form .form-group {
+    max-width: 100%;
+    min-width: 100%;
+    margin: 0 0 1em 0;
+  }
+  .containerFluid .container form .form-group label {
+    font-weight: 400;
+    font-size: 15px;
+    margin: 0 0 0.5em 0;
+  }
+  .containerFluid .container form .form-group input {
+    min-width: 50%;
+    max-width: 100%;
+  }
+  .containerFluid .container form .form-group select {
+    min-width: 50%;
+    max-width: 100%;
+  }
+  .containerFluid .container form #payDate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    max-width: 50%;
+  }
+  .containerFluid .container form #payDate .paymentDate {
+    width: 60%;
+    max-width: 65%;
+  }
+  .containerFluid .container form #payDate .paymentDate #paymentDateInput {
+    min-width: 60%;
+    max-width: 65%;
+  }
+  .containerFluid .container form #payDate .paymentTime {
+    width: 40%;
+    max-width: 40%;
+    text-align: center;
+  }
+  .containerFluid .container form #payDate .paymentTime #paymentTimeInput {
+    min-width: 40%;
+    text-align: center;
+    padding-left: 1.5em;
+  }
+  .containerFluid .container form .payDesc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+  }
+  .containerFluid .container form .payDesc label {
+    white-space: nowrap;
+    padding: 0 0.5em 0 0;
+  }
+  .containerFluid .container form .payDesc .paymentDescription {
+    width: 80%;
+    max-width: 68%;
+  }
+  .containerFluid .container form .payDesc .paymentDescription .itemDesc {
+    min-width: 100%;
+    max-width: 80%;
+  }
+  .containerFluid .container form .payDesc .addon {
+    text-align: right;
+    width: 30%;
+  }
+  .containerFluid .container form .payDesc .addon .addonInput {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .containerFluid .container form .addItem {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    color: #1207AB;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  .containerFluid .container form .addItem strong {
+    margin: 0 0 0 0.3em;
+  }
+  .containerFluid .container form #upPayment {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .containerFluid .container form #upPayment label {
+    white-space: nowrap;
+  }
+  .containerFluid .container form #upPayment .UpFrontPayment {
+    width: 48%;
+    max-width: 48%;
+  }
+  .containerFluid .container form #upPayment .UpFrontPayment #upFrontInput {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .containerFluid .container form #upPayment .balancePayment {
+    width: 48%;
+  }
+  .containerFluid .container form #upPayment .balancePayment #balancedInput {
+    max-width: 100%;
+    width: 100%;
+  }
+  .containerFluid .container form #due {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 100%;
+  }
+  .containerFluid .container form #due span {
+    max-width: 100%;
+  }
+  .containerFluid .container form #due .duedate {
+    width: 80%;
+    max-width: 68%;
+  }
+  .containerFluid .container form #due .duedate #duedateInput {
+    min-width: 100%;
+    max-width: 80%;
+  }
+  .containerFluid .container form #due .paymentTime {
+    width: 30%;
+  }
+  .containerFluid .container form #due .paymentTime #paymentInput {
+    width: 100%;
+  }
+  .containerFluid .container form button {
+    border-color: #1207AB;
+    text-align: center;
+    color: white;
+    background: #1207AB;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 1em;
+    min-height: 50px;
+    max-height: 60px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .containerFluid .container .form2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 2em 2em;
+    min-width: 80%;
+    max-width: 80%;
+    min-height: auto;
+  }
+  .containerFluid .container .form2 button {
+    margin: auto;
+    width: 70%;
+    max-width: 100%;
+  }
+}
+/*# sourceMappingURL=invoice.css.map */

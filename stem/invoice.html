@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Payment Invoice Portal</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="sass/invoice.css" />
+</head>
+
+<body>
+  <div class="modalContainer">
+    <div class="modal">
+      <a class="cancelButton">
+        <img src="images/cancelbutton.svg" alt="CancelButton" />
+      </a>
+      <div class="modalText">
+        <img src="images/dustbin.svg" alt="dustBin" />
+        <h4>Do you want to delete this item?</h4>
+        <div>
+          <button class="deleteBtn">Delete Item</button>
+        </div>
+      </div>
+    </div>
+    <div class="deletedModal">
+      <div class="deletemodalcontent">
+        <h4>Deleted</h4>
+        <span> <img src="images/dustbin.svg" alt="dustBin" /> </span>
+      </div>
+    </div>
+  </div>
+  <section class="containerFluid">
+    <img src="images/bluecircle.svg" alt="blue image" id="blueImage" />
+    <section class="container">
+      <div class="headingText">
+        <h1>PAYMENT INVOICE PORTAL</h1>
+        <small id="small" style="margin-bottom: 2em">
+          (for admin use only )
+        </small>
+        <p class="lead">
+          Please enter customer's payment details to continue
+        </p>
+      </div>
+      <form name="payerform" class="payerform" autocomplete="on" method="POST">
+        <section>
+          <div class="form-group emailGroup">
+            <label for="inputEmail"> payer’s email </label>
+            <input type="email" name="email" class="form-control emailInput" placeholder="enter payer’s email"
+              aria-describedby="helpId" />
+          </div>
+
+          <div class="form-group">
+            <label for="inputPayerName"> payer’s name </label>
+            <input type="text" name="name" placeholder="enter payer’s name" />
+          </div>
+
+          <div class="form-group">
+            <label for="payerAddress"> payer’s address </label>
+            <input type="text" name="address" class="form-control" placeholder="enter payer’s address"
+              aria-describedby="helpId" />
+          </div>
+
+          <div class="form-group" id="payDate">
+            <span class="paymentDate">
+              <label for="paymentdate"> payment date </label>
+              <input type="date" name="paymentDate" id="paymentDateInput" />
+            </span>
+            <span class="paymentTime">
+              <label for="paymentTime"> Time </label>
+              <input type="time" name="paymentTime" id="paymentTimeInput" placeholder="17:45" />
+            </span>
+          </div>
+        </section>
+        <section>
+          <div class="form-group">
+            <label for="inputPaymentType"> Payment type </label>
+            <select id="courses" name="paymentType" aria-placeholder="Choose payment type">
+              <option value="" disabled invalid selected hidden id="selected"
+                style="font-weight: lighter; font-size: 5px; color: #b4b4b4">
+                Choose payment type
+              </option>
+              <option value="Academy">Academy</option>
+              <option value="Info">Consultancy</option>
+              <option value="Stem">Stem</option>
+              <option value="Workstation">Workstation</option>
+            </select>
+          </div>
+          <div class="itemMom">
+            <div class="form-group payDesc">
+              <span class="paymentDescription">
+                <label> Item description </label>
+              </span>
+              <span class="addon">
+                <label>&#8358; Amount</label>
+              </span>
+            </div>
+            <div class="form-group payDesc">
+              <span class="paymentDescription">
+                <input type="text" placeholder="enter item description" class="itemDesc" />
+              </span>
+              <span class="addon">
+                <input type="text" placeholder="enter amount" class="addonInput" />
+                <span class="inner">
+                  <img src="images/dustbin.svg" alt="" />
+                  <strong> Remove item</strong>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: flex-end">
+            <span id="outer" class="addItem outer">
+              <img src="images/plusSign.svg" alt="Add Product" />
+              <strong> Add more item/s </strong>
+            </span>
+          </div>
+          <div class="form-group" id="upPayment">
+            <span class="UpFrontPayment">
+              <label for="Upfrontpayment"> Upfront payment </label>
+              <input type="text" id="upFrontInput" name="upfrontPayment" placeholder="enter upfront payment" />
+            </span>
+            <span class="balancePayment">
+              <label for="balancepayment" id="balance">
+                Balance Amount
+              </label>
+              <input type="text" id="balancedInput" name="balancepayment" placeholder="enter balance amount" />
+            </span>
+          </div>
+          <div class="form-group" id="due">
+            <span class="duedate">
+              <label for="duedate"> Due Date </label>
+              <input type="date" name="dueDate" id="duedateInput" />
+            </span>
+            <span class="paymentTime">
+              <label for="paymentTime"> Time </label>
+              <input type="time" name="dueTime" id="paymentInput" />
+            </span>
+          </div>
+
+          <button type="submit" class="continue">
+            Continue <img src="images/arrowright.svg" alt="Arrow" />
+          </button>
+        </section>
+      </form>
+
+      <form name="form2" action="Post" class="form2" style="display: none" action="Post">
+        <div class="form-group">
+          <label for="inputEmail"> Mail Subject </label>
+          <input type="text" name="mailSubject" class="form-control" placeholder="Enter email subject in CAPITALS"
+            aria-describedby="helpId" />
+        </div>
+        <div class="form-group">
+          <label for="CcEmail"> Cc </label>
+          <input type="text" id="CcEmail" name="CcEmail" class="form-control" placeholder="seperate mails with commas"
+            aria-describedby="helpId" />
+        </div>
+
+        <div class="form-group">
+          <label for="inputPayerName"> Admin Password </label>
+          <input type="password" name="adminPassword" placeholder="enter admin password" />
+        </div>
+        <button type="submit">Send invoice</button>
+      </form>
+    </section>
+  </section>
+
+  <script src="js/invoiceModal.js"></script>
+  <script src="js/sendInvoice.js"></script>
+</body>
+
+</html>

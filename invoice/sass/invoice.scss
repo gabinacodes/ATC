@@ -1,0 +1,1029 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap);
+
+:root {
+    --atccolor: #1207AB;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+html {
+    color: #1B121C;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-position: center;
+    background: #1207AB;
+}
+
+::selection {
+    color: #fff;
+    background-color: #0271FB;
+}
+
+a,
+button {
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+        color: #0271FB;
+    }
+}
+
+img {
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+sup {
+    color: red;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+
+
+h3 {
+    margin: 0 0 20px 0;
+    font-weight: 900;
+}
+
+h4 {
+    margin: 0 0 20px 0;
+    font-weight: 900;
+
+}
+
+
+.modalContainer {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #FF3131;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 50vw;
+    height: 100vh;
+
+    .modal {
+        background-color: #FFFFFF;
+        border-radius: 24px;
+        height: 40vh;
+        max-width: 90vw;
+        
+        padding: 1em 1em 0 1em;
+
+        a {
+            float: right;
+        }
+
+        .modalText {
+            margin: auto;
+            margin: 2em;
+            text-align: center;
+            min-height: 50vh;
+
+            img {
+                min-width: 20%;
+                display: block;
+                margin: auto;
+                margin-bottom: 1em;
+            }
+        }
+    }
+
+    button {
+        background-color: #FF3131;
+        color: #FFFFFF;
+        min-width: 50%;
+        min-height: 50px;
+        max-height: 60px;
+        font-size: 20px;
+        padding: 1em 1em;
+        margin-top: 1em;
+
+        &:hover {
+            text-decoration: none;
+            background-color: #e03333;
+        }
+    }
+
+    .deletedModal {
+        background-color: #FFFFFF;
+        border-radius: 24px;
+        min-height: 45vh;
+        min-width: 90vw;
+        max-width: 40vw;
+        padding: 1em 1em 0 1em;
+        display: none;
+        align-items: center;
+        
+
+        .deletemodalcontent {
+            margin: auto;
+            text-align: center;
+            font-size: 30px;
+            width: 100%;
+
+            img {
+                min-width: 10%;
+                display: block;
+                margin: auto;
+                margin-bottom: 1em;
+            }
+        }
+
+    }
+
+}
+
+.containerFluid {
+    position: relative;
+
+    #blueImage {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+        min-width: 50px;
+        max-width: 150px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 0 3em 0;
+
+        .headingText {
+            text-align: center;
+            color: #FFFFFF;
+
+            h1 {
+                margin: auto auto 20px auto;
+                word-break: break-all;
+                font-size: 27px;
+                font-weight: normal;
+                line-height: 126.5%;
+                text-align: center;
+                width: 230px;
+            }
+
+            .lead {
+                margin: 0.5em auto 20px auto;
+                width: 290px;
+            }
+        }
+
+        form {
+            background: #FFFFFF;
+            border-radius: 24px;
+            min-width: 90%;
+            max-width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 2em 1em;
+
+            section {
+                width: 100%;
+            }
+
+            .form-group {
+                min-width: 100%;
+                margin: 0 0 1em 0;
+
+                label {
+                    display: block;
+                    color: #000000;
+                    font-weight: 600;
+                    font-size: 12px;
+                    margin: 0 0 0.5em 0;
+                }
+
+                input {
+                    border: 1px solid #A9A9A9;
+                    box-sizing: border-box;
+                    padding: 0 10px 0 10px;
+                    border-radius: 5px;
+                    min-height: 50px;
+                    max-height: 60px;
+                    width: 100%;
+                    max-width: 100%;
+                }
+
+                select {
+                    border: 1px solid #A9A9A9;
+                    box-sizing: border-box;
+                    padding: 0 0 0 3px;
+                    border-radius: 5px;
+                    min-height: 50px;
+                    max-height: 60px;
+                    width: 100%;
+                    max-width: 100%;
+
+                    &:invalid {
+                        color: gray;
+                    }
+
+                    #selected {
+                        font-weight: normal;
+                        color: #B4B4B4;
+
+                    }
+                }
+
+
+                select:invalid {
+                    background: red;
+                }
+
+
+            }
+
+            #payDate {
+                display: flex;
+                justify-content: space-between;
+
+                .paymentDate {
+                    width: 80%;
+                    max-width: 68%;
+
+                    #paymentDateInput {
+                        min-width: 100%;
+                        max-width: 80%;
+                    }
+                }
+
+                .paymentTime {
+                    width: 30%;
+                    text-align: right;
+
+                    #paymentTimeInput {
+                        min-width: 100%;
+                    }
+                }
+            }
+
+            .payDesc {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                width: 100%;
+
+                label {
+                    white-space: nowrap;
+                    padding: 0 0.5em 0 0;
+                }
+
+                .paymentDescription {
+                    width: 80%;
+                    max-width: 68%;
+
+                    .itemDesc {
+                        min-width: 100%;
+                        max-width: 80%;
+                    }
+                }
+
+                .addon {
+                    text-align: right;
+                    width: 30%;
+
+                    .addonInput {
+                        width: 100%;
+                        display: block;
+                        text-align: center;
+                    }
+
+                    .inner {
+                        color: #FF3131;
+                        margin-top: 5px;
+                        display: none;
+                        font-size: 10px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+
+            .addItem {
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                color: #1207AB;
+                width: 100%;
+                margin-bottom: 1em;
+                font-size: 10px;
+                cursor: pointer;
+
+                strong {
+                    margin: 0 0 0 0.3em;
+                }
+            }
+
+            #upPayment {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                label {
+                    white-space: nowrap;
+                }
+
+                .UpFrontPayment {
+                    width: 48%;
+                    max-width: 48%;
+
+                    #upFrontInput {
+                        min-width: 100%;
+                        max-width: 100%;
+                    }
+                }
+
+                .balancePayment {
+                    width: 48%;
+                    text-align: right;
+
+                    #balancedInput {
+                        max-width: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+
+            #due {
+                display: flex;
+                justify-content: space-between;
+                max-width: 100%;
+
+                span {
+                    max-width: 100%;
+                }
+
+                .duedate {
+                    width: 80%;
+                    max-width: 68%;
+
+                    #duedateInput {
+                        min-width: 100%;
+                        max-width: 80%;
+                    }
+                }
+
+                .paymentTime {
+                    width: 30%;
+                    text-align: right;
+
+                    #paymentInput {
+                        width: 100%;
+                    }
+                }
+            }
+
+            button {
+                border-color: #1207AB;
+                text-align: center;
+                font-size: 20px;
+                color: white;
+                background: #1207AB;
+                border-radius: 5px;
+                margin: auto;
+                margin-top: 1em;
+                min-height: 50px;
+                max-height: 60px;
+                width: 100%;
+                max-width: 100%;
+
+                img {
+                    padding-left: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+
+    .modalContainer {
+        min-width: 50vw;
+        height: 100vh;
+
+
+        .modal {
+            min-height: 40vh;
+            max-height: 40vh;
+            min-width: 40vw;
+            max-width: 70vw;
+            padding: 1em 1em 0 1em;
+
+            a {
+                float: right;
+            }
+
+            .modalText {
+                margin: auto;
+                padding-top: 3em;
+                margin: 2em;
+                text-align: center;
+
+                img {
+                    min-width: 40px;
+                    display: block;
+                    margin: auto;
+                    margin-bottom: 1em;
+                }
+            }
+        }
+
+        button {
+            &:hover {
+                text-decoration: none;
+                background-color: #e03333;
+            }
+        }
+
+        .deletedModal {
+            background-color: #FFFFFF;
+            border-radius: 24px;
+            min-height: 45vh;
+            min-width: 70vw;
+            padding: 1em 1em 0 1em;
+
+
+            .deletemodalcontent {
+                margin: auto;
+                text-align: center;
+                font-size: 30px;
+                width: 100%;
+
+                img {
+                    min-width: 10%;
+                    display: block;
+                    margin: auto;
+                    margin-bottom: 1em;
+                }
+            }
+
+        }
+
+    }
+
+    .containerFluid {
+        position: relative;
+
+        #blueImage {
+            max-width: 350px;
+        }
+
+        .container {
+            .headingText {
+                h1 {
+
+                    margin: auto auto 3px auto;
+                    font-size: 34px;
+                    font-weight: 900;
+                    width: 100%;
+                }
+
+                .lead {
+                    margin: 2em auto 30px auto;
+                    width: 100%;
+                }
+            }
+
+
+            form {
+                min-width: 60%;
+                max-width: 60%;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+                padding: 2em 2.5em;
+
+                section {
+                    min-width: 46%;
+                    max-width: 46%;
+                }
+
+                .form-group {
+                    max-width: 100%;
+                    min-width: 100%;
+                    margin: 0 0 1em 0;
+
+                    label {
+                        font-weight: 600;
+                        font-size: 14px;
+                        margin: 0 0 0.5em 0;
+                    }
+
+                    input {
+                        min-width: 50%;
+                        max-width: 100%;
+                    }
+
+                    select {
+                        min-width: 50%;
+                        max-width: 100%;
+                    }
+                }
+
+                #payDate {
+                    display: flex;
+                    justify-content: flex-start;
+                    max-width: 50%;
+
+                    .paymentDate {
+                        width: 60%;
+                        max-width: 65%;
+
+                        #paymentDateInput {
+                            min-width: 60%;
+                            max-width: 65%;
+                        }
+                    }
+
+                    .paymentTime {
+                        width: 40%;
+                        max-width: 40%;
+                        text-align: right;
+
+                        #paymentTimeInput {
+                            min-width: 40%;
+                            text-align: center;
+                            padding-left: 1.5em;
+                        }
+                    }
+                }
+
+                .payDesc {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    width: 100%;
+
+                    label {
+                        white-space: nowrap;
+                        padding: 0 0.5em 0 0;
+                    }
+
+                    .paymentDescription {
+                        width: 80%;
+                        max-width: 68%;
+
+                        .itemDesc {
+                            min-width: 100%;
+                            max-width: 80%;
+                        }
+                    }
+
+                    .addon {
+                        text-align: right;
+                        width: 30%;
+
+                        .addonInput {
+                            width: 100%;
+                            display: block;
+                            text-align: center;
+                        }
+                    }
+                }
+
+
+
+                .addItem {
+                    border: none;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    color: #1207AB;
+                    width: 100%;
+                    margin-bottom: 1em;
+
+                    strong {
+                        margin: 0 0 0 0.3em;
+                    }
+                }
+
+                #upPayment {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+
+                    label {
+                        white-space: nowrap;
+                    }
+
+                    .UpFrontPayment {
+                        width: 48%;
+                        max-width: 48%;
+
+                        #upFrontInput {
+                            min-width: 100%;
+                            max-width: 100%;
+                        }
+                    }
+
+                    .balancePayment {
+                        width: 48%;
+
+                        #balancedInput {
+                            max-width: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                #due {
+                    display: flex;
+                    justify-content: space-between;
+                    max-width: 100%;
+
+                    span {
+                        max-width: 100%;
+                    }
+
+                    .duedate {
+                        width: 80%;
+                        max-width: 68%;
+
+                        #duedateInput {
+                            min-width: 100%;
+                            max-width: 80%;
+                        }
+                    }
+
+                    .paymentTime {
+                        width: 30%;
+                        text-align: right;
+
+                        #paymentInput {
+                            width: 100%;
+                            text-align: center;
+                            padding-left: 1.5em;
+                        }
+                    }
+                }
+
+                .button {
+                    border-color: #1207AB;
+                    text-align: center;
+                    font-size: 20px;
+                    color: white;
+                    background: #1207AB;
+                    border-radius: 5px;
+                    margin: auto;
+                    margin-top: 1em;
+                    min-height: 50px;
+                    max-height: 60px;
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+
+            .form2 {
+                display: flex;
+                flex-direction: column;
+                padding: 2em 5em;
+                min-width: 40%;
+                max-width: 60%;
+
+                button {
+                    width: 70%;
+                    max-width: 100%;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 1300px) {
+
+    .modalContainer {
+        .modal {
+            min-height: 60vh;
+            max-height: 60vh;
+            min-width: 40vw;
+            max-width: 70vw;
+            padding: 1em 1em 0 1em;
+
+            a {
+                float: right;
+            }
+
+            .modalText {
+                padding-top: 1.5em;
+                margin: auto;
+                margin-top: 2em;
+                text-align: center;
+                font-size: 25px;
+                min-width: 30px;
+
+                img {
+                    display: block;
+                    margin: auto;
+                    margin-bottom: 1em;
+                }
+            }
+        }
+
+        button {
+            background-color: #FF3131;
+            color: #FFFFFF;
+            min-width: 50%;
+            min-height: 50px;
+            max-height: 60px;
+            font-size: 20px;
+
+            &:hover {
+                text-decoration: none;
+                background-color: #e03333;
+            }
+        }
+
+        .deletedModal {
+            background-color: #FFFFFF;
+            border-radius: 24px;
+            min-height: 45vh;
+            min-width: 30vw;
+            padding: 1em 1em 0 1em;
+
+            .deletemodalcontent {
+                margin: auto;
+                text-align: center;
+                font-size: 30px;
+                width: 100%;
+
+                img {
+                    min-width: 10%;
+                    display: block;
+                    margin: auto;
+                    margin-bottom: 1em;
+                }
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (min-width:800px) and (max-width: 1360px) {
+    .containerFluid {
+        position: relative;
+
+
+        #blueImage {
+            max-width: 550px;
+        }
+
+        .container {
+            .headingText {
+                font-size: 30px;
+
+                h1 {
+                    font-size: 40px;
+                    font-weight: 900;
+                    width: 100%;
+                }
+
+                .lead {
+                    font-size: 20px;
+                    width: 100%;
+                }
+            }
+
+            form {
+                min-width: 90%;
+                max-width: 90%;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+                padding: 6.5em 2.5em 2em 2.5em;
+                min-height: 70vh;
+
+
+                section {
+                    min-width: 46%;
+                    max-width: 46%;
+                }
+
+                .form-group {
+                    max-width: 100%;
+                    min-width: 100%;
+                    margin: 0 0 1em 0;
+
+                    label {
+                        font-weight: 400;
+                        font-size: 15px;
+                        margin: 0 0 0.5em 0;
+                    }
+
+                    input {
+                        min-width: 50%;
+                        max-width: 100%;
+                    }
+
+                    select {
+                        min-width: 50%;
+                        max-width: 100%;
+                    }
+                }
+
+                #payDate {
+                    display: flex;
+                    justify-content: flex-start;
+                    max-width: 50%;
+
+                    .paymentDate {
+                        width: 60%;
+                        max-width: 65%;
+
+                        #paymentDateInput {
+                            min-width: 60%;
+                            max-width: 65%;
+                        }
+                    }
+
+                    .paymentTime {
+                        width: 40%;
+                        max-width: 40%;
+                        text-align: center;
+
+                        #paymentTimeInput {
+                            min-width: 40%;
+                            text-align: center;
+                            padding-left: 1.5em;
+                        }
+                    }
+                }
+
+                .payDesc {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    width: 100%;
+
+                    label {
+                        white-space: nowrap;
+                        padding: 0 0.5em 0 0;
+                    }
+
+                    .paymentDescription {
+                        width: 80%;
+                        max-width: 68%;
+
+                        .itemDesc {
+                            min-width: 100%;
+                            max-width: 80%;
+                        }
+                    }
+
+                    .addon {
+                        text-align: right;
+                        width: 30%;
+
+                        .addonInput {
+                            width: 100%;
+                            display: block;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                .addItem {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    color: #1207AB;
+                    width: 100%;
+                    margin-bottom: 1em;
+
+                    strong {
+                        margin: 0 0 0 0.3em;
+                    }
+                }
+
+                #upPayment {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+
+                    label {
+                        white-space: nowrap;
+                    }
+
+                    .UpFrontPayment {
+                        width: 48%;
+                        max-width: 48%;
+
+                        #upFrontInput {
+                            min-width: 100%;
+                            max-width: 100%;
+                        }
+                    }
+
+                    .balancePayment {
+                        width: 48%;
+
+                        #balancedInput {
+                            max-width: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                #due {
+                    display: flex;
+                    justify-content: space-between;
+                    max-width: 100%;
+
+                    span {
+                        max-width: 100%;
+                    }
+
+                    .duedate {
+                        width: 80%;
+                        max-width: 68%;
+
+                        #duedateInput {
+                            min-width: 100%;
+                            max-width: 80%;
+                        }
+                    }
+
+                    .paymentTime {
+                        width: 30%;
+
+                        #paymentInput {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                button {
+                    border-color: #1207AB;
+                    text-align: center;
+                    color: white;
+                    background: #1207AB;
+                    border-radius: 5px;
+                    margin: auto;
+                    margin-top: 1em;
+                    min-height: 50px;
+                    max-height: 60px;
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+
+            .form2 {
+                display: flex;
+                flex-direction: column;
+                padding: 2em 2em;
+                min-width: 80%;
+                max-width: 80%;
+                min-height: auto;
+
+                button {
+                    margin: auto;
+                    width: 70%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

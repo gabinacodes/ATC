@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">
+	<!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ATC ROBOTICS AND AI CLUB</title>
+	<meta name="description"
+		content="KIDS is a clean, modern, and fully responsive Html Template. Take your Startup business website to the next level. It is designed for kindergarten, childcare, homeschooling, school, learning, playground businesses or any type of person or business who wants to showcase their work, services and professional way.">
+	<meta name="keywords"
+		content="business, care, childcare, children, clean, corporate, happykids, homeschool, kids, kindergarten, playground, responsive, school, learning">
+	<meta name="author" content="rometheme.net">
+
+	<!-- ==============================================
+	CSS VENDOR
+	=============================================== -->
+	<link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/vendor/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/vendor/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="css/vendor/owl.theme.default.min.css">
+	<link rel="stylesheet" type="text/css" href="css/vendor/magnific-popup.css">
+	<link rel="stylesheet" type="text/css" href="css/vendor/animate.min.css">
+
+	<!-- ==============================================
+	Custom Stylesheet
+	=============================================== -->
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/atc.css" />
+	<link rel="stylesheet" type="text/css" href="css/payment.css" />
+ <!-- Facebook Pixel Code -->
+ <script>
+	!function(f,b,e,v,n,t,s)
+	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];
+	s.parentNode.insertBefore(t,s)}(window, document,'script',
+	'https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '1134397743663351');
+	fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=1134397743663351&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- End Facebook Pixel Code -->
+	<script src="js/vendor/modernizr.min.js"></script>
+	<script defer src="https://paylink.ng/cdn/paylink.checkout.js"></script>
+	<script defer src="js/fetch.js"></script>
+</head>
+
+<body>
+
+	<!-- LOAD PAGE -->
+	<div class="animationload">
+		<div class="loader"></div>
+	</div>
+
+	<div class="modal">
+		<div class="container-fluid Payment-Portal">
+			<div class="container">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times"
+					class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 352 512">
+					<path fill="currentColor"
+						d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
+					</path>
+				</svg>
+				<p class="lead">You are welcome to ATC</p>
+				<h1>Payment Portal</h1>
+				<form class="form-group" name="studentForm" onsubmit="return getKids()">
+					<label for="email" id="labelVerify">Verify your email</label>
+					<input type="email" name="email" placeholder=" Guardian Email" data-form-field="email"
+						class="form-control" value="" id="email-form7-t" required>
+					<i style="color: red;" id="notRegistered"></i>
+					<div class="select">
+						<ul id="verified"></ul>
+					</div>
+					<input id="validateBtn" class="btn btn-primary" type="submit" value="Submit">
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- BACK TO TOP SECTION -->
+	<a href="#0" class="cd-top cd-is-visible cd-fade-out">Top</a>
+
+	<!-- HEADER -->
+	<div class="header header-1">
+
+		<!-- TOPBAR -->
+		<div class="topbar">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-sm-8 col-md-6">
+						<div class="info">
+							<div class="info-item">
+								<i class="fa fa-phone"></i> +2349035807050
+							</div>
+							<div class="info-item">
+								<i class="fa fa-envelope-o"></i> <a href="mailto:africatrainovationconsultd@gmail.com"
+									title="">stem@atc.com.ng</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- NAVBAR SECTION -->
+		<div class="navbar-main">
+			<div class="container">
+				<nav id="navbar-example" class="navbar navbar-expand-lg">
+					<a class="navbar-brand" href="//atc.com.ng">
+						<img src="images/atc-logo.svg" alt="" style="height: 44px;">
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+						aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item active">
+								<a class="nav-link" href="/">HOME</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="about.html">ABOUT US</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="gallery.html">GALLERY</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="events.html">EVENTS</a>
+							</li>
+							<li class="nav-item dropdown dmenu">
+								<a class="nav-link" href="package.html" role="button">
+									PRICE
+								</a>
+							</li>
+							<li class="nav-item dropdown dmenu">
+								<a class="nav-link pay" href="payment" role="button">
+									PAYMENT
+								</a>
+							</li>
+							<!-- <li class="nav-item dropdown dmenu">
+			                    <a class="nav-link " href="register.html" role="button" >
+						          REGISTER
+						        </a>
+			                </li> -->
+							<!-- <li class="nav-item">
+			                    <a class="nav-link" href="contact.html">CONTACT US</a>
+			                </li> -->
+						</ul>
+					</div>
+				</nav> <!-- -->
+
+			</div>
+		</div>
+	</div>
+
+	<!-- BANNER -->
+	<div id="oc-fullslider" class="banner">
+		<div class="owl-carousel owl-theme full-screen">
+			<div class="item">
+				<img src="images/stem8.jpg" alt="Slider">
+				<div class="overlay-bg"></div>
+				<div class="container d-flex align-items-center">
+					<div class="wrap-caption">
+						<h5 class="caption-supheading">ATC STEM FOR CODING</h5>
+						<h1 class="caption-heading">Empower your kids to learn how to write codes for web development
+							and mobile application softwares at ATC STEM Club.</h1>
+						<div class="btn-wrapper">
+							<a href="register.html" style="color: #fff;">
+								<button class="btn-2" style="color: #fff;">REGISTER KIDS</button>
+							</a>
+							<!--a href="school-reg.html" style="color: #fff;">
+							 <button class="btn-1" style="color: #fff;">REGISTER YOUR SCHOOL</button>
+							</a-->
+							<a href="summercamp" style="color: #fff;">
+								<button class="btn-1" style="color: #fff;">REGISTER FOR SUMMER BOOTCAMP</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<img src="images/0011.jpg" alt="Slider">
+				<div class="overlay-bg"></div>
+				<div class="container d-flex align-items-center">
+					<div class="wrap-caption">
+						<h5 class="caption-supheading">ATC STEM AND ROBOTICS</h5>
+						<h1 class="caption-heading">At ATC Stem Club, Robotic science has been repackaged to be fun and
+							educational. Grab the opportunity today and introduce your kids to the most sought after
+							technology in the 21st century.</h1>
+						<div class="btn-wrapper">
+							<a href="register.html" style="color: #fff;">
+								<button class="btn-2" style="color: #fff;">REGISTER AN INDIVIDUAL</button>
+							</a>
+							<a href="school-reg.html" style="color: #fff;">
+								<button class="btn-1" style="color: #fff;">REGISTER YOUR SCHOOL</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<img src="images/1.1.jpeg" alt="Slider">
+				<div class="overlay-bg"></div>
+				<div class="container d-flex align-items-center">
+					<div class="wrap-caption">
+						<h5 class="caption-supheading">ATC STEM FOR GAME & ANIMATION DEVELOPMENT</h5>
+						<h1 class="caption-heading">What if your kids can make their own games instead of just playing
+							games and watching TV? Bring them to ATC Stem club and they’d make you proud.</h1>
+						<div class="btn-wrapper">
+							<a href="register.html" style="color: #fff;">
+								<button class="btn-2" style="color: #fff;">REGISTER AN INDIVIDUAL</button>
+							</a>
+							<a href="school-reg.html" style="color: #fff;">
+								<button class="btn-1" style="color: #fff;">REGISTER YOUR SCHOOL</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom-nav owl-nav"></div>
+	</div>
+	<!-- WELCOME TO KIDS -->
+	<div class="section">
+		<div class="content-wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-12 col-lg-6">
+						<img src="images/4.jpg" alt="" class="img-fluid img-border">
+					</div>
+					<div class="col-sm-12 col-md-12 col-lg-6">
+						<h2 class="section-heading" style="color: #1209ab;">
+							WELCOME TO ATC STEM CLUB
+						</h2>
+						<p>At ATC STEM Club, the participants shall have the unique opportunity of learning and becoming
+							wizards even at a tender age in the world of technology which is the right legacy to
+							bequeath to them in this ever changing knowledge driven century.
+							ATC stem club is a physical learning institution that offers a variety of computer
+							programming courses and tools that bridge the gap between wanting to code; make, program &
+							design robots; Internet of things ( iOT’S ) and becoming an expert in the field of game and
+							animation development. </p>
+						<p>The uniqueness of ATC stem club is that unlike a conventional learning institution, we tend
+							to teach the children real text-based programming and design from day one in an easy and
+							game-like manner. The courses are designed in such a way that they are so user - friendly
+							and intuitive so children can jump right into them without needing an introductory course or
+							previous coding background. </p>
+						<div class="spacer-10"></div>
+						<div class="spacer-30"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- FUNFACT -->
+	<div class="section bgi-overlay bgi-cover-center" style="background-color: #1209ab;">
+		<div class="content-wrap">
+			<div class="container">
+				<div class="row">
+					<!-- Item 1 -->
+					<div class="col-sm-6 col-md-3">
+						<div class="rs-funfact bg-primary">
+							<div class="box-fun">
+								<h2 style=" color: #1a1666;
+								font-family: 'Roboto';
+								top: 13px;">1</h2>
+							</div>
+							<div class="title">Location</div>
+						</div>
+					</div>
+					<!-- Item 2 -->
+					<div class="col-sm-6 col-md-3">
+						<div class="rs-funfact bg-secondary">
+							<div class="box-fun">
+								<h2 style=" color: #1a1666;
+								font-family: 'Roboto';
+								top: 13px;">7</h2>
+							</div>
+							<div class="title">Events</div>
+						</div>
+					</div>
+					<!-- Item 3 -->
+					<div class="col-sm-6 col-md-3">
+						<div class="rs-funfact bg-tertiary">
+							<div class="box-fun">
+								<h2 style=" color: #1a1666;
+								font-family: 'Roboto';
+								top: 13px;">127</h2>
+							</div>
+							<div class="title">Trained</div>
+						</div>
+					</div>
+					<!-- Item 4 -->
+					<div class="col-sm-6 col-md-3">
+						<div class="rs-funfact bg-quaternary">
+							<div class="box-fun">
+								<h2 style=" color: #1a1666;
+								font-family: 'Roboto';
+								top: 13px;">4</h2>
+							</div>
+							<div class="title">Partners</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- OUR ARTICLES -->
+	<div class="">
+		<div class="content-wrap">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-sm-12 col-md-12">
+						<p class="supheading text-center" style="color: #1209ab;">Our Programs</p>
+					</div>
+				</div>
+
+				<div class="row mt-4">
+
+					<!-- Item 1 -->
+					<div class="col-sm-12 col-md-12 col-lg-4">
+						<div class="rs-class-box mb-5">
+							<div class="media-box">
+								<img src="images/5.jpg" alt="" class="img-fluid">
+							</div>
+							<div class="body-box">
+								<div class="class-name">
+									<div class="title">Robotics</div>
+									<!-- <div class="price">$20</div> -->
+								</div>
+								<p>Robotics deals with the design, construction, operation, and use of robots and
+									computer systems for their control, sensory feedback, and information processing.
+									A robot is a unit that implements this interaction with the physical world based on
+									sensors, actuators, and information processing.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Item 2 -->
+					<div class="col-sm-12 col-md-12 col-lg-4">
+						<div class="rs-class-box mb-5">
+							<div class="media-box">
+								<img src="images/7.jpg" alt="" class="img-fluid">
+							</div>
+							<div class="body-box">
+								<div class="class-name">
+									<div class="title">Engineering</div>
+									<!-- <div class="price">$20</div> -->
+								</div>
+								<p>Children have a natural curiosity that lends itself to science, technology, math, and
+									engineering. At ATC Stem Club, we inspire kids to build on their innate desire for
+									answers by exploring engineering concepts in a fun, hands-on way.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Item 3 -->
+					<div class="col-sm-12 col-md-12 col-lg-4">
+						<div class="rs-class-box mb-5">
+							<div class="media-box">
+								<img src="images/6.jpg" alt="" class="img-fluid">
+							</div>
+							<div class="body-box">
+								<div class="class-name">
+									<div class="title">Game Development</div>
+									<!-- <div class="price">$20</div> -->
+								</div>
+								<p>Game design is one of the most challenging and creative processes around. It involves
+									Creative Problem Solving, Computer Science, Arts, Sound, Psychology, and most of all
+									Fun. ATC Stem Club students will be provided with the necessary tools to create
+									their own game from the SCRATCH.</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- WHY CHOOSE US -->
+	<div class="section bgi-repeat" style=" background-color: #1209ab;">
+		<div class="content-wrap pb-0">
+			<div class="container">
+				<div class="row align-items-end">
+					<div class="col-sm-12 col-md-12 col-lg-7">
+						<p class="supheading" style="color: #fff;">Why Choose Us</p>
+						<p class="p-check text-white">At ATC, we have a group of committed and competent Professionals
+							with proven technical know -how in STEM who have had the best of education and trainings
+							combine with multiple years of experience with many success stories both in Nigeria and
+							abroad.</p>
+						<p class="p-check text-white">Our Stem Laboratory is well equipped with modern facilities that
+							may not be ordinarily available elsewhere due to cost and logistics of procurement. However,
+							the desire to offer the best to our clients has propelled us into acquiring them with utmost
+							delight. Of course, this does not only make the job of transferring the knowledge much more
+							easier for us but it actually help in attracting the interest of young children to wanting
+							to learn.</p>
+						<p class="p-check text-white">At ATC, we are giving more at a relatively low cost comparatively.
+							We make bold to say that the price of our product and services are the most financially
+							friendly anyone can find around when put side by side with the quality of service we render.
+							Our interest is to rouse the curiosity of young children and to make them top STEM
+							technocrats in the future above other considerations.</p>
+						<div class="spacer-90"></div>
+					</div>
+					<div class="col-sm-12 col-md-12 col-lg-5">
+						<img src="images/9.jpg" alt="" class="img-fluid">
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- OUR GALLERY -->
+	<div class="">
+		<div class="content-wrap">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-sm-12 col-md-12">
+						<p class="supheading text-center" style="color: #1207AB;">Our Gallery</p>
+						<h2 class="section-heading text-center mb-5" style="color: #1207AB;">
+							Moment from kids
+						</h2>
+					</div>
+				</div>
+
+				<div class="row popup-gallery gutter-5">
+					<!-- Item 1 -->
+					<div class="col-xs-12 col-md-6 col-lg-4">
+						<div class="box-gallery">
+							<a href="images/stem2.jpg" title="Gallery #1">
+								<img src="images/stem2.jpg" alt="" class="img-fluid">
+								<div class="project-info">
+									<div class="project-icon">
+										<span class="fa fa-search"></span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<!-- Item 1 -->
+					<div class="col-xs-12 col-md-6 col-lg-4">
+						<div class="box-gallery">
+							<a href="images/stem5.jpg" title="Gallery #2">
+								<img src="images/stem5.jpg" alt="" class="img-fluid">
+								<div class="project-info">
+									<div class="project-icon">
+										<span class="fa fa-search"></span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<!-- Item 1 -->
+					<div class="col-xs-12 col-md-6 col-lg-4">
+						<div class="box-gallery">
+							<a href="images/2.jpg" title="Gallery #3">
+								<img src="images/2.jpg" alt="" class="img-fluid">
+								<div class="project-info">
+									<div class="project-icon">
+										<span class="fa fa-search"></span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<!-- Item 2 -->
+					<div class="col-xs-12 col-md-6 col-lg-4">
+						<div class="box-gallery">
+							<a href="images/stem7.jpg" title="Gallery #4">
+								<img src="images/stem7.jpg" alt="" class="img-fluid">
+								<div class="project-info">
+									<div class="project-icon">
+										<span class="fa fa-search"></span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<!-- Item 3 -->
+					<div class="col-xs-12 col-md-6 col-lg-4">
+						<div class="box-gallery">
+							<a href="images/4.jpg" title="Gallery #5">
+								<img src="images/4.jpg" alt="" class="img-fluid">
+								<div class="project-info">
+									<div class="project-icon">
+										<span class="fa fa-search"></span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<!-- Item 4 -->
+					<div class="col-xs-12 col-md-6 col-lg-4">
+						<div class="box-gallery">
+							<a href="images/005.jpg" title="Gallery #6">
+								<img src="images/005.jpg" alt="" class="img-fluid">
+								<div class="project-info">
+									<div class="project-icon">
+										<span class="fa fa-search"></span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- OUR EVENTS -->
+	<div class="section bgi-cover-center" style="background-color: #1209ab;">
+		<div class="content-wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-12">
+						<p class="supheading text-center">Our Events</p>
+						<h2 class="section-heading text-center mb-5">
+							Don't miss our event
+						</h2>
+					</div>
+				</div>
+
+				<div class="row mt-4">
+					<!-- Item 1 -->
+					<div class="col-sm-12 col-md-12 col-lg-4 mb-5">
+						<div class="rs-news-1">
+							<div class="media-box">
+								<img src="images/12.jpeg" alt="" class="img-fluid">
+							</div>
+							<div class="body-box">
+								<div class="title">STEM BOOTCAMP</div>
+								<div class="meta-date">Jan 12-13, 2021 </div>
+								<div class="text-center">
+									<a href="#" class="btn btn-primary">CLOSED</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Item 2 -->
+					<div class="col-sm-12 col-md-12 col-lg-4 mb-5">
+						<div class="rs-news-1">
+							<div class="media-box">
+								<img src="images/summerflier.png" alt="" class="img-fluid">
+							</div>
+							<div class="body-box">
+								<div class="title">SUMMER BOOTCAMP</div>
+								<div class="meta-date">AUGUST, 2021 </div>
+								<div class="text-center">
+									<a href="#" class="btn btn-primary">UPCOMING</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Item 3 -->
+					<div class="col-sm-12 col-md-12 col-lg-4 mb-5">
+						<div class="rs-news-1">
+							<div class="media-box">
+								<img src="images/HACK THE FUTURE.png" alt="" class="img-fluid">
+							</div>
+							<div class="body-box">
+								<div class="title">STEM HACKATHON</div>
+								<div class="meta-date">JULY, 2021 </div>
+								<div class="text-center">
+									<a href="#" class="btn btn-primary">UPCOMING</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- OUR TESTIMONIALS -->
+	<!-- <div class="section">
+		<div class="content-wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-12">
+						<p class="supheading text-center" style="color: #1209ab;">Our Testimonials</p>
+						<h2 class="section-heading text-center mb-5" style="color: #1209ab;">
+							What parents say
+						</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-md-10 offset-md-1">
+						<div class="text-center text-secondary mb-3"><i class="fa fa-quote-right fa-3x"></i></div>
+						<div id="testimonial" class="owl-carousel owl-theme">
+							<div class="item">
+								<div class="rs-box-testimony">
+									<div class="quote-box">
+										<blockquote>
+										 Teritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam
+										</blockquote>
+										<div class="media">
+											<img src="images/dummy-img-400x400.jpg" alt="" class="rounded-circle">
+										</div>
+										<p class="quote-name">
+											Johnathan Doel <span>Businessman</span>
+										</p>                        
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="rs-box-testimony">
+									<div class="quote-box">
+										<blockquote>
+										 Teritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam
+										</blockquote>
+										<div class="media">
+											<img src="images/dummy-img-400x400.jpg" alt="" class="rounded-circle">
+										</div>
+										<p class="quote-name">
+											Johnathan Doel <span>CEO Buka Kreasi</span>
+										</p>                        
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+	<!-- FOOTER SECTION -->
+	<div class="footer" style="background-color: #222323;">
+		<div class="content-wrap">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="footer-item">
+							<img src="images/atc-logo.svg" alt="logo bottom" class="logo-bottom">
+							<div class="spacer-30"></div>
+							<p>Africa trainovation consulting limited (ATC) is a digital hub for innovative and
+								transformational trainings, skills acquisition and consultancy for working
+								professionals, organizations, companies and the society at large. ATC is situated in
+								Abeokuta, Ogun state, Nigeria and founded in 2019.</p>
+							<a href="https://www.africatrainovationconsulting.com/support/about"><i
+									class="fa fa-angle-right"></i> Read More</a>
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="footer-item">
+							<div class="footer-title">
+								Contact Info
+							</div>
+							<ul class="list-info">
+								<li>
+									<div class="info-icon">
+										<span class="fa fa-map-marker"></span>
+									</div>
+									<div class="info-text">opposite FMC, Km. 100 Olabisi Onabanjo way, Idi-aba, 110222,
+										Abeokuta</div>
+								</li>
+								<li>
+									<div class="info-icon">
+										<span class="fa fa-phone"></span>
+									</div>
+									<div class="info-text">+2349035807050</div>
+								</li>
+								<li>
+									<div class="info-icon">
+										<span class="fa fa-envelope"></span>
+									</div>
+									<div class="info-text">stem@atc.com.ng</div>
+								</li>
+								<li>
+									<div class="info-icon">
+										<span class="fa fa-clock-o"></span>
+									</div>
+									<div class="info-text">Every Saturday(3 hours)</div>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="footer-item">
+							<div class="footer-title">
+								Useful Links
+							</div>
+
+							<ul class="list">
+
+								<li><a href="index.html">Home</a></li>
+								<li><a href="about.html">About us</a></li>
+								<li><a href="gallery.html">Gallery</a></li>
+								<li><a href="events.html">Events</a></li>
+							</ul>
+
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="footer-item">
+							<div class="footer-title">
+								Get in Touch
+							</div>
+							<div class="sosmed-icon d-inline-flex">
+								<a href="#" class="fb"><i class="fa fa-facebook"></i></a>
+								<a href="#" class="tw"><i class="fa fa-twitter"></i></a>
+								<a href="#" class="ig"><i class="fa fa-instagram"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="fcopy">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-12">
+						<p class="ftex">Copyright 2021 &copy; <span class="color-primary">ATCHub</span>.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- JS VENDOR -->
+	<script src="js/vendor/jquery.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/vendor/owl.carousel.js"></script>
+	<script src="js/vendor/jquery.magnific-popup.min.js"></script>
+
+	<!-- SENDMAIL -->
+	<script src="js/vendor/validator.min.js"></script>
+	<script src="js/vendor/form-scripts.js"></script>
+
+	<script src="js/script.js"></script>
+
+</body>
+
+</html>

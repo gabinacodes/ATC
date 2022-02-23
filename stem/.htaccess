@@ -1,0 +1,50 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
+
+# Disable Directory Browsing
+Options All -Indexes
+
+#IndexIgnore * // enabling this will show the dir but no file in case of missing index file
+
+# Deny everyone else, by sending a Forbidden (403) response
+##RewriteRule ^ - [F]
+
+# Document to show
+##ErrorDocument 403 /forbidden.html
+
+# force url to lowercase if upper case is found
+# ensure it is not a file on the drive first
+RewriteCond %{REQUEST_URI} [A-Z]
+RewriteCond %{REQUEST_FILENAME} !-s
+RewriteRule (.*) rewrite-strtolower.php?rewrite-strtolower-url=$1 [QSA,L]
+
+# DISABLE CACHING
+<IfModule mod_headers.c>
+Header set Cache-Control "no-cache, no-store, must-revalidate"
+Header set Pragma "no-cache"
+Header set Expires 0
+</IfModule>
+
+#<FilesMatch "\.(css|flv|gif|htm|html|ico|jpe|jpeg|jpg|js|mp3|mp4|png|pdf|swf|txt)$">
+#<IfModule mod_expires.c>
+#ExpiresActive Off
+#</IfModule>
+#<IfModule mod_headers.c>
+#FileETag None
+#Header unset ETag
+#Header unset Pragma
+#Header unset Cache-Control
+#Header unset Last-Modified
+#Header set Pragma "no-cache"
+#Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+#Header set Expires "Thu, 1 Jan 1970 00:00:00 GMT"
+#</IfModule>
+#</FilesMatch>
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^stem\.atc\.com\.ng$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.stem\.atc\.com\.ng$
+RewriteRule ^(.*)$ "https\:\/\/stem\.atc\.com\.ng\/$1" [R=301,L]
+

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> ATC Invoice </title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --atccolor: #1207AB;
+      font-size: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      outline: 0;
+      border: 0;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
+    }
+
+    html {
+      color: #000;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: "Roboto", sans-serif;
+      background-position: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      padding: 0;
+      width: 100%;
+      height: initial;
+      font-size: 16px;
+    }
+
+    .signature {
+      width: 100%;
+      margin: 0;
+    }
+
+    .signature .logo {
+      width: 20%;
+    }
+
+    th.space {
+      width: 40%;
+    }
+
+    .container .signature img {
+      display: inline;
+    }
+
+    .container .paid small {
+      font-size: 14px;
+      line-height: 12px;
+    }
+
+    .container .bank {
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 14px;
+      margin: 0 0 0 0;
+    }
+
+    .container section {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    .container section div {
+      padding: 15px 5px;
+    }
+
+    .container section div .invoice {
+      background: #EDEDED;
+    }
+
+    .container section div .invoice p {
+      margin-top: 10px;
+    }
+
+    .container .ceoName {
+      padding: 15px 10px;
+      width: 55.9%;
+      line-height: 1.4;
+    }
+
+    .container .ceoName p {
+      margin-top: 10px;
+    }
+
+    .container table {
+      margin: 30px 0 20px 0;
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .container section table td,
+    .container section table th {
+      border: 1px solid #dddddd;
+      padding: 8px;
+      line-height: 3;
+    }
+
+    .container section table th {
+      background-color: #EDEDED;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .container table #tfoot {
+      background-color: #D5D5D5;
+    }
+
+    .container table .total {
+      display: block;
+      text-align: center;
+    }
+
+    .container table #grand {
+      text-align: right;
+    }
+
+    .container table .empty {
+      height: 50px;
+    }
+
+    .container table #no-border {
+      border: none;
+    }
+
+    footer {
+      font-size: 11px;
+      padding: 1em 0 0 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 30px;
+      color: white;
+      text-align: center;
+      background-color: #3E4095;
+      width: 100%;
+    }
+
+
+    @media screen and (min-width: 720px) {
+      body {
+        background-color: #E5E5E5;
+      }
+
+      .container-fluid {
+        background-color: white;
+        -webkit-box-shadow: #fff;
+        box-shadow: #fff;
+        margin: auto;
+        height: 726;
+        width: 700px;
+      }
+
+      .container {
+        font-size: 20px;
+      }
+
+      .container #tfoot {
+        background-color: #D5D5D5;
+        font-weight: 700;
+        font-size: 25px;
+        color: #373737;
+      }
+
+      .container .paid small {
+        padding: 20px 0 0 0;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 12px;
+      }
+
+      footer {
+        font-size: 10px;
+        margin: auto;
+        padding: 20px 0;
+        height: 50px;
+        color: white;
+        text-align: center;
+        background-color: #3E4095;
+      }
+    }
+
+    /*# sourceMappingURL=payment.css.map */
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid" style="width: 100%;">
+    <div class="container">
+      <table class="signature">
+        <thead>
+          <tr>
+            <th class="logo"> <img src="../images/atcLogo.svg" alt="ATCLogo" /></th>
+            <th class="space"></th>
+            <th class="paid" style="text-align: right;"> <img style="height: 140px;" src="../images/paidImg.svg" alt="paid img" />
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <br>
+          <tr>
+            <td></td>
+            <td></td>
+            <td class="bank" style="padding: 1em 0 0 1em; text-align: right; ">
+              <b style="text-align: right; font-size: 16px; white-space: nowrap;"> Africa Trainovation Consulting</b>
+            </td>
+            <p style=" margin-top: 1em;"> GTBank - 0605087061 </p>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td class="bank" style="padding: 1em 0 0 1em; text-align: right; ">
+              <p style=" margin-top: 1em;"> GTBank - 0605087061 </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <section>
+        <table class="invoice_" style= " border: none;display: flex; min-width: 100%; max-width: 100%; justify-content: space-between; background-color:#EDEDED;">
+          <tr class="invoice" style=" border: none; padding: 4px; line-height: 2;">
+            <td style="font-size: 16px; border: none;padding: 4px; line-height: 2;">&nbsp; Invoice #${InvoiceID} </td>
+            <td style="padding: 4px; line-height: 2; text-align: right; border: none; color: #049134; display: flex; justify-content: space-between;">${upfrontPayment}</td>
+            </tr>
+            <tr style="padding: 4px; line-height: 2; border: none; width: 40%;">
+              <td style="padding: 4px; line-height: 2; border: none;">&nbsp; Invoice Date: ${invoiceDate} </td>
+              <td style="padding: 4px; line-height: 2; text-align: right; border: none; color: red; margin-top: 10px; display: flex; justify-content: space-between;"> ${unclearedBalance} 
+              </td>
+            </tr>
+            <tr style="padding: 4px; line-height: 2;">
+              <td style="padding: 4px; line-height: 2; border: none;">&nbsp; Payment time: ${invoiceTime} </td>
+              <td style="padding: 4px; line-height: 2; text-align: right; border: none; margin-top: 10px;  display: flex; justify-content: space-between;"> ${dueDate}
+              </td>
+
+          </tr>
+          
+
+        </table>
+        <div class="ceoName">
+          <span>
+            <strong>Invoiced To: <p>${payer}</p></strong>
+            <p> ${address}</p>
+          </span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th style='width:75%'><strong>Description</strong> </th>
+              <th style='text-align:right'><strong>Total(N)</strong></th>
+            </tr>
+          </thead>
+
+
+
+          <tbody>
+           ${tableRowsHTML}
+            <tr class="empty">
+              <td class="noBorder" style="border: none;"></td>
+              <td class="Border"></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+   
+  </div>
+  
+  <footer>
+    Issued by: Africa Trainovation Consulting Limited  <small> (RC 1624010) </small>
+  </footer>
+</body>
+
+</html>

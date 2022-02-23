@@ -1,0 +1,88 @@
+header {
+  height: $headerHeight;
+  width: 100%;
+  padding: $contentPadding;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  color: $black;
+  box-shadow: 5px 10px 18px #eeeeee00;
+  transition: all 0.5s ease;
+  @include flex(row, space-between, center);
+
+  a {
+    img {
+      width: 80%;
+      margin: 0;
+    }
+  }
+
+  span {
+    &.navLinks {
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: $headerHeight 0;
+      width: 75%;
+      background-color: $white;
+      @include media {
+        max-width: 80%;
+      }
+      @include media($laptop) {
+        @include flex(row, space-between, center);
+        position: static;
+        max-width: 55%;
+        padding: 0;
+        background-color: transparent;
+      }
+
+      a {
+        text-align: left;
+        padding: 0 0 0 $paddingSide;
+        width: 100%;
+        border-bottom: 1px solid #eeecec;
+        line-height: 2.5;
+        color: rgba($color: $black, $alpha: 0.59);
+        border-radius: 0;
+        font-size: 15px;
+        @include media($laptop) {
+          padding: 0;
+          border-bottom: none;
+          width: auto;
+          &:not(:last-child):hover {
+            text-decoration: underline solid $deepBlue $smallpadding;
+            text-underline-offset: $smallpadding;
+          }
+        }
+
+        &:last-child {
+          transition: all 0.3s;
+          border: 2px solid $black;
+          border-radius: 10px;
+          display: none;
+
+          @include media($laptop) {
+            display: flex;
+            width: 25%;
+            height: 42px;
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    &.icon {
+      color: rgba($color: $black, $alpha: 0.59);
+      opacity: 0.59;
+      align-self: center;
+      cursor: pointer;
+      svg {
+        width: 0.3 * $headerHeight;
+      }
+
+      @include media($laptop) {
+        display: none;
+      }
+    }
+  }
+}

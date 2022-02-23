@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mailing Format</title>
+</head>
+<body>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+:root {
+  --atccolor: #1207AB;
+  font-size: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+html {
+  color: #000;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-position: center;
+  background-color: #F6F6F6;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: var(--atccolor);
+}
+
+::selection {
+  color: #fff;
+  background-color: var(--atccolor);
+}
+
+.container {
+  margin: auto;
+  margin-top: 60px;
+  height: auto;
+  background-color: #fff;
+  width: 35%;
+  padding: 2.5em 0 4em 0;
+}
+
+.container table {
+  width: 85%;
+  margin: auto;
+}
+
+.container table img {
+  margin-bottom: 6em;
+}
+
+.container table strong {
+  margin-top: 20px;
+}
+
+.container table p {
+  margin-top: 20px;
+  line-height: 1.5em;
+}
+
+.container table #p_last {
+  margin-bottom: 20px;
+}
+
+.container2 {
+  margin: auto;
+  height: auto;
+  background-color: #3E4095;
+  width: 35%;
+  padding: 1.2em 0;
+}
+
+.container2 table {
+  width: 85%;
+  margin: auto;
+  text-align: center;
+  color: #dbdbdb;
+  font-size: 9px;
+}
+
+.container2 table #social {
+  -webkit-column-count: 4;
+          column-count: 4;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.container2 img {
+  width: 8%;
+  padding: 0 1em 0.7em 1em;
+  color: #dbdbdb;
+}
+
+#footer {
+  table-layout: fixed;
+  margin: auto;
+  height: auto;
+  line-height: 1.7em;
+  text-align: center;
+  color: #9e9c9c;
+  font-size: 9px;
+  padding: 1.2em 0 3em 0;
+}
+
+#footer #privacy {
+  width: 30%;
+}
+
+#footer #privacy a {
+  color: #9e9c9c;
+  padding: 0 1em;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 780px) {
+  .container {
+    min-width: 50%;
+  }
+  .container2 {
+    min-width: 50%;
+  }
+  .container2 img {
+    width: 20%;
+    padding: 0 1em 0.7em 1em;
+  }
+
+}
+  </style>
+
+  <section class="container">
+    <table>
+      <thead>
+          <tr>
+                      <th>
+          <img src="https://atc.com.ng/pics/ATC_logoStem.png" alt="AtcLogo">
+        </th>
+                  </tr>
+
+    </thead>
+      <tbody>
+      <tr>
+        <td>
+          <Strong>
+            Dear Ademola,
+          </Strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            Long before we launched the beta version of xxxx in 2019, our dream has 
+            been to build a reliable xxxxx not only for you but with you and everyone 
+            else who trusts us to look after their xxxxxxxxx.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            In the almost two years that we’ve been around, our journey has remained 
+            collaborative and we’ve deliberately carried you along as we learned by 
+            experience what it means to run a xxxxxx that works for people.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p id="p_last">
+            Through numerous notifications (some of which may have annoyed you), 
+            impromptu downtimes and support that could be a lot faster, you’ve stuck 
+            around and believed in us.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-bottom: 2em;">
+            Thank you,
+        </td>
+      </tr>
+      <tr>
+        <td>
+          The ATC Team.
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="container2">
+  <table>
+  <tfoot>
+    <tr>
+      <td id="social icon">
+        <a href="#">
+          <img src="https://atc.com.ng/pics/twitterStem.png" alt="Follow Twitter"/>
+      </a>
+      <a href="#">
+        <img src="https://atc.com.ng/pics/facebookStem.png" alt="Facebook">
+      </a>
+      <a href="#">
+        <img src="https://atc.com.ng/pics/linkedinStem.png" alt="Linkedin">
+      </a>
+      <a href="#">
+        <img src="https://atc.com.ng/pics/instagramStem.png" alt="Instagam">
+      </a>
+      </td>
+    </tr>
+  </tfoot>
+  </table>
+    <table>
+    <tr> 
+      <td> 
+        Africa Trainovation Consulting, Km. 100 Olabisi Onabanjo way, adjacent Federal Medical Center, <br>
+      Idi-Aba, Abeokuta, Ogun state.
+    </td>
+  </tr>
+</table>
+</section>
+
+<table id="footer">
+  <tr>
+    <td>
+      Copyright, ATC Hub 2021.
+    
+      All rights reserved.
+    </td>
+  </tr>
+  <tr id="privacy">
+    <td id="terms">
+      <a href="#">
+        Terms      
+      </a>
+      <a href="#">
+        Privacy      
+      </a>
+      <a href="#">
+        License
+      </a>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

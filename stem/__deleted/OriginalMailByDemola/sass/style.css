@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+:root {
+  --atccolor: #1207AB;
+  font-size: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+html {
+  color: #000;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-position: center;
+  background-color: #F6F6F6;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: var(--atccolor);
+}
+
+::selection {
+  color: #fff;
+  background-color: var(--atccolor);
+}
+
+.container {
+  margin: auto;
+  margin-top: 60px;
+  height: auto;
+  background-color: #fff;
+  width: 35%;
+  padding: 2.5em 0 4em 0;
+}
+
+.container table {
+  width: 85%;
+  margin: auto;
+}
+
+.container table img {
+  margin-bottom: 6em;
+}
+
+.container table strong {
+  margin-top: 20px;
+}
+
+.container table p {
+  margin-top: 20px;
+  line-height: 1.5em;
+}
+
+.container table #p_last {
+  margin-bottom: 20px;
+}
+
+.container2 {
+  margin: auto;
+  height: auto;
+  background-color: #3E4095;
+  width: 35%;
+  padding: 1.2em 0;
+}
+
+.container2 table {
+  width: 85%;
+  margin: auto;
+  text-align: center;
+  color: #dbdbdb;
+  font-size: 9px;
+}
+
+.container2 table #social {
+  -webkit-column-count: 4;
+          column-count: 4;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.container2 img {
+  width: 8%;
+  padding: 0 1em 0.7em 1em;
+  color: #dbdbdb;
+}
+
+#footer {
+  table-layout: fixed;
+  margin: auto;
+  height: auto;
+  line-height: 1.7em;
+  text-align: center;
+  color: #9e9c9c;
+  font-size: 9px;
+  padding: 1.2em 0 3em 0;
+}
+
+#footer #privacy {
+  width: 30%;
+}
+
+#footer #privacy a {
+  color: #9e9c9c;
+  padding: 0 1em;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 780px) {
+  .container {
+    min-width: 50%;
+  }
+  .container2 {
+    min-width: 50%;
+  }
+  .container2 img {
+    width: 50%;
+    padding: 0 1em 0.7em 1em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
