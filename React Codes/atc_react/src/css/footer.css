@@ -1,0 +1,56 @@
+footer {
+}
+
+.main-footer {
+  padding: 6vh 2vw 4vh 4vw;
+  background-color: #282d42;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.left-footer {
+}
+
+.left-footer p {
+  padding: 5px;
+  font-size: 1.1rem;
+  color: rgb(240, 224, 224);
+}
+
+.right-footer {
+  margin-bottom: 50px;
+  width: 400px;
+}
+
+.right-footer p {
+  font-size: 1.3rem;
+  color: rgb(240, 224, 224);
+  letter-spacing: 1.5px;
+}
+
+.follow {
+  margin-top: 20px;
+}
+
+.follow a {
+  padding: 10px;
+}
+.follow svg {
+  font-size: 30px;
+  color: #fff;
+}
+
+.follow svg:hover {
+  opacity: 0.6;
+}
+
+.sub-footer {
+  background-color: #010b34;
+}
+
+.sub-footer p {
+  padding: 20px;
+  color: #fff;
+  font-size: 1.3rem;
+}
